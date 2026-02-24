@@ -1,0 +1,7 @@
+{
+  "name": "VedArta Design Studio",
+  "description": "High-end interior design and architectural studio. Premium service, AI-integrated consulting, and bespoke living spaces.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
