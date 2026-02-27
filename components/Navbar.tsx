@@ -74,7 +74,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenAI }) => {
   return (
     <>
       <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ease-in-out border-b ${isScrolled || isMenuOpen ? 'bg-[#041a16] py-4 shadow-2xl border-[#ffcc00]/20' : 'bg-transparent py-8 md:py-10 border-transparent'}`}>
-        <div className="container mx-auto px-4 lg:pl-6 lg:pr-24 flex items-center justify-between">
+        <div className="mx-auto max-w-7xl px-6 flex items-center justify-between">
           
           <div className="flex items-center gap-8 lg:gap-14">
             <div className="flex items-center" onClick={(e) => scrollToSection(e as any, '#')}>
