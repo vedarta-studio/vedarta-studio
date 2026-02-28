@@ -116,9 +116,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenAI }) => {
               )}
             </button>
 
-            <button 
+                        <button 
               onClick={onOpenAI}
-              className="relative overflow-hidden group text-[10px] md:text-[11px] tracking-[0.3em] font-black px-8 md:px-10 py-3.5 md:py-4 rounded-full transition-all flex items-center gap-3 text-[#ffcc00] border-2 border-[#ffcc00]/50 hover:border-[#ffcc00] hover:bg-[#ffcc00]/10 hover:shadow-[0_0_25px_rgba(255,204,0,0.4)] active:scale-95 bg-[#041a16]/40 backdrop-blur-md"
+              className="relative overflow-hidden group text-[9px] md:text-[10px] tracking-[0.2em] font-black px-5 md:px-6 py-2.5 md:py-3 rounded-full transition-all flex items-center gap-2 text-[#ffcc00] border-2 border-[#ffcc00]/50 hover:border-[#ffcc00] hover:bg-[#ffcc00]/10 hover:shadow-[0_0_25px_rgba(255,204,0,0.4)] active:scale-95 bg-[#041a16]/40 backdrop-blur-md"
             >
               <div className="relative flex h-2.5 w-2.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#ffcc00] opacity-75"></span>
