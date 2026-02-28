@@ -116,17 +116,16 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenAI }) => {
               )}
             </button>
 
-                        <button 
-              onClick={onOpenAI}
-              className="relative overflow-hidden group text-[9px] md:text-[10px] tracking-[0.2em] font-black px-5 md:px-6 py-2.5 md:py-3 rounded-full transition-all flex items-center gap-2 text-[#ffcc00] border-2 border-[#ffcc00]/50 hover:border-[#ffcc00] hover:bg-[#ffcc00]/10 hover:shadow-[0_0_25px_rgba(255,204,0,0.4)] active:scale-95 bg-[#041a16]/40 backdrop-blur-md"
-            >
-              <div className="relative flex h-2.5 w-2.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#ffcc00] opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#ffcc00]"></span>
-              </div>
-              <span className="hidden sm:inline uppercase">AI Ассистент</span>
-              <span className="sm:hidden uppercase">AI</span>
-            </button>
+                       <button 
+  onClick={onOpenAI}
+  className="relative overflow-hidden group text-[8px] tracking-[0.15em] font-bold px-4 py-2 rounded-full transition-all flex items-center gap-2 text-[#ffcc00] border border-[#ffcc00]/50 hover:border-[#ffcc00] hover:bg-[#ffcc00]/10 active:scale-95 bg-[#041a16]/50 backdrop-blur-sm"
+>
+  <div className="relative flex h-2 w-2">
+    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#ffcc00] opacity-75"></span>
+    <span className="relative inline-flex rounded-full h-2 w-2 bg-[#ffcc00]"></span>
+  </div>
+  <span className="uppercase">AI</span>
+</button> 
 
             <button 
               className="lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-2 z-[120] relative group"
