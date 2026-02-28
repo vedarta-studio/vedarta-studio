@@ -53,7 +53,7 @@ const handleOpenAI = () => {
       {/* Floating AI Button */}
 <button
   onClick={handleOpenAI}
-  className="fixed bottom-6 right-3 z-40 w-12 h-12 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center shadow-lg hover:scale-105 transition-transform duration-300"
+  className="fixed bottom-6 right-3 z-40 w-12 h-12 rounded-full bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600 flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-105 animate-pulse"
   title="AI Дизайн-Ассистент"
 >
   <svg
