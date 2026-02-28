@@ -90,7 +90,26 @@ export const Portfolio: React.FC = () => {
             </div>
           ))}
         </div>
-
+        {/* Evolution block: link to old sAnyaAD portfolio */}
+        <div className="mt-24 md:mt-32 max-w-5xl mx-auto text-center">
+          <h3 className="text-2xl md:text-3xl font-logo italic text-[#f5f5dc] leading-snug mb-6">
+            Эволюция <span className="text-[#ffcc00]">sAnyaAD → VedArta</span>
+          </h3>
+          <p className="text-sm md:text-base text-[#f5f5dc]/70 leading-relaxed mb-8">
+            Я уже упоминала в истории студии, что раньше моя авторская мастерская называлась sAnyaAD.
+            Если вам интересно посмотреть живой путь и сравнить ранние интерьеры с сегодняшней VedArta,
+            загляните в архивное портфолио — там видно, как время и новые технологии двигают вперёд
+            архитектуру и дизайн.
+          </p>
+          <button
+            onClick={() =>
+              window.open('https://dissanya.wixsite.com/sanya-ad/portfolio', '_blank')
+            }
+            className="btn-gold px-10 md:px-14 py-4 md:py-5 text-[10px] md:text-xs font-black tracking-[0.35em] uppercase"
+          >
+            Смотреть архивное портфолио sAnyaAD
+          </button>
+        </div>
         {selectedProject && (
           <div 
             className="fixed inset-0 z-[10000] bg-[#041a16] flex items-center justify-center animate-fade-in overflow-hidden"
