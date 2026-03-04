@@ -151,7 +151,7 @@ export const siteConfig = {
     title: "Фундамент реализации",
     subtitle: "Состав проектной документации",
     description: "Проект VedArta — это детальная инструкция для строителей, где просчитан каждый миллиметр, каждый кабель и каждый стык материалов.",
-    excelLink: "https://docs.google.com/spreadsheets/d/10wpIF3EnCB-jefQI_QxLtwICrYDhT8W4/edit?usp=sharing&ouid=112943527846631831396&rtpof=true&sd=true", 
+    excelLink: "https://docs.google.com/spreadsheets/d/1E6MC8B22yNdiwJvjgYZEJ_o9-bZTprqo8ZMUT9yHShM/edit",
     technicalSheets: [
       { title: "Обмерочный план", preview: "https://drive.google.com/thumbnail?id=1vlo3PHB9y06eQDV79yHcit8QpHxC9pMV&sz=w1200", desc: "Точная фиксация геометрии." },
       { title: "План монтажа перегородок", preview: "https://drive.google.com/thumbnail?id=19rwQ5dOFlv8kot86EYTUXIZR4Fu72XM5&sz=w1200", desc: "Конструктивное решение стен." },
