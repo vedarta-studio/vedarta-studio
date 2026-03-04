@@ -172,9 +172,9 @@ export const Documentation: React.FC = () => {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-                {projectDocumentation.technicalSheets.map((item, idx) => (
-                  <SheetCard key={idx} item={item} idx={idx} />
-                ))}
+                {projectDocumentation.technicalSheets.map((item: any, idx: number) => (
+  <SheetCard item={item} idx={idx} />
+))}
               </div>
             </div>
 

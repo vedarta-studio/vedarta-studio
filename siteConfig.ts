@@ -147,7 +147,7 @@ export const siteConfig = {
       ]
     }
   },
-  projectDocumentation: {
+   projectDocumentation: {
     title: "Фундамент реализации",
     subtitle: "Состав проектной документации",
     description: "Проект VedArta — это детальная инструкция для строителей, где просчитан каждый миллиметр, каждый кабель и каждый стык материалов.",
@@ -160,7 +160,13 @@ export const siteConfig = {
       { title: "План расстановки мебели", preview: "https://drive.google.com/thumbnail?id=1SVXmQv0Th77BepnqnXhwPtAGHA7ivBLY&sz=w1200", desc: "Эргономика пространства." },
       { title: "Мебель + Розетки + Свет", preview: "https://drive.google.com/thumbnail?id=124bm5clcl3-vcrG-FrioFvVM_ipCVFM9&sz=w1200", desc: "Комплексное техническое оснащение." },
       { title: "План сети освещения", preview: "https://drive.google.com/thumbnail?id=1mSXkgeGru43pmCrcnNYK9bYmXjeHNz1r&sz=w1200", desc: "Группы и привязки света." },
-      { title: "Инженерный план", preview: "https://drive.google.com/thumbnail?id=1LyMw62k4LrDqg7GzP-EdKZLBPGD-E0o9&sz=w1200", desc: "Розетки, сантехника, плинтус." }
+      { title: "Инженерный план", preview: "https://drive.google.com/thumbnail?id=1LyMw62k4LrDqg7GzP-EdKZLBPGD-E0o9&sz=w1200", desc: "Розетки, сантехника, плинтус." },
+
+      // Новые развёртки ванной
+      { title: "Ванная — стена A", preview: "https://drive.google.com/thumbnail?id=1WafWiJpLmtcQTPfVdLZyr4tva-ojKslf&sz=w1200", desc: "Раскладка плитки, унитаз и привязки сантехники." },
+      { title: "Ванная — стена B", preview: "https://drive.google.com/thumbnail?id=1hyltmGfJYzJmHzl1Vu-Q8eUShSGzFQcn&sz=w1200", desc: "Раковина, системы хранения и раскладка плитки." },
+      { title: "Ванная — стена C", preview: "https://drive.google.com/thumbnail?id=1cIu7J948_eEFncH0rrwJy7gwg42CcN_M&sz=w1200", desc: "Дверь, полотенцесушитель и привязка розеток." },
+      { title: "Ванная — стена D", preview: "https://drive.google.com/thumbnail?id=1rTb8Si9X_ghaIDX1qLKsgFFL0LxiZNKp&sz=w1200", desc: "Ванна, смесители и раскладка плитки." }
     ],
     view3D: [
       { title: "3D Планировка Лист 1", preview: "https://drive.google.com/thumbnail?id=1ydf18bZjloE_XVkAThxY2yf-BW-BBeq7&sz=w1200" },
@@ -171,8 +177,8 @@ export const siteConfig = {
       { title: "3D Планировка 6", preview: "https://drive.google.com/thumbnail?id=10Sa_bA7W3ScBL558lBU2Oec3q9dHqndq&sz=w1200" },
       { title: "3D Планировка 7", preview: "https://drive.google.com/thumbnail?id=1QZqjGzuX86H7MAt_roz9_2D_xpQriMxS&sz=w1200" },
       { title: "3D Планировка 8", preview: "https://drive.google.com/thumbnail?id=1BwGx4WPEfOP9Et_g2dme8QJ9Z7zN5fV9&sz=w1200" }
-    ]
-  },
+      ]
+     },
   portfolio: [
     {
       id: "belgrade-loft",
