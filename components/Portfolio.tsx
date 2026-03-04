@@ -90,6 +90,67 @@ export const Portfolio: React.FC = () => {
             </div>
           ))}
         </div>
+        {/* Key Projects block */}
+
+<div className="mt-28 md:mt-36 max-w-6xl mx-auto px-6">
+
+  <h2 className="text-2xl md:text-3xl font-logo italic text-[#f5f5dc] mb-8 text-center">
+    Ключевые объекты портфолио VedArta
+  </h2>
+
+  <p className="text-sm md:text-base text-[#f5f5dc]/80 leading-relaxed mb-12 text-center max-w-3xl mx-auto">
+    В портфолио VedArta собраны проекты разных масштабов — от компактных городских квартир до загородной архитектуры и курортных пространств.
+    Но есть три объекта, которые стали важными точками формирования философии студии и отражают мой профессиональный путь как архитектора и дизайнера.
+    Каждый из них — это не только реализованный проект, но и важный профессиональный опыт, который сформировал подход к работе с пространством, архитектурой и человеком.
+  </p>
+
+  <div className="grid md:grid-cols-3 gap-8">
+
+    {/* Smart Renovation */}
+    <a href="/smart-renovation" className="group relative overflow-hidden">
+      <img
+        src="https://drive.google.com/uc?export=view&id=1YJiS-K1PruDax_qnJj6AkEbTcMVYPNeP"
+        loading="lazy"
+        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+      <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex flex-col justify-end p-6">
+        <span className="text-xs tracking-widest text-[#ffcc00] mb-2">URBAN RESIDENCE</span>
+        <h3 className="text-lg text-white mb-4">Smart Renovation</h3>
+       <span className="text-sm text-white/80">Изучить детали</span>
+      </div>
+    </a>
+
+    {/* Elki */}
+    <a href="/elki" className="group relative overflow-hidden">
+      <img
+        src="https://drive.google.com/uc?export=view&id=1ZfIumSFuOYdj647qJuSMF8WKou82XcEz"
+        loading="lazy"
+        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+      <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex flex-col justify-end p-6">
+        <span className="text-xs tracking-widest text-[#ffcc00] mb-2">FOREST RETREAT</span>
+        <h3 className="text-lg text-white mb-4">Elki</h3>
+       <span className="text-sm text-white/80">Изучить детали</span>
+      </div>
+    </a>
+
+    {/* Atlantis */}
+    <a href="/atlantis" className="group relative overflow-hidden">
+      <img
+        src="https://drive.google.com/uc?export=view&id=1yF4t7XD5FoRUKoDQjKQoJR--EJgcmTWW"
+        loading="lazy"
+        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+      <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex flex-col justify-end p-6">
+        <span className="text-xs tracking-widest text-[#ffcc00] mb-2">LAKE RESORT</span>
+        <h3 className="text-lg text-white mb-4">Atlantis</h3>
+        <span className="text-sm text-white/80">Изучить детали</span>
+      </div>
+    </a>
+
+  </div>
+
+</div>
         {/* Evolution block: link to old sAnyaAD portfolio */}
         <div className="mt-24 md:mt-32 max-w-5xl mx-auto text-center">
           <h3 className="text-2xl md:text-3xl font-logo italic text-[#f5f5dc] leading-snug mb-6">
