@@ -113,7 +113,7 @@ export const Portfolio: React.FC = () => {
       aria-label="Открыть Смарт Реновация"
     >
       <img
-        src="https://drive.google.com/uc?export=view&id=1YJiS-K1PruDax_qnJj6AkEbTcMVYPNeP"
+        src="https://drive.google.com/thumbnail?id=1YJiS-K1PruDax_qnJj6AkEbTcMVYPNeP&sz=w1200"
         loading="lazy"
         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         alt="Смарт Реновация"
