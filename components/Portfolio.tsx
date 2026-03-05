@@ -92,7 +92,7 @@ export const Portfolio: React.FC = () => {
         </div>
        {/* KEY PROJECTS — hover like portfolio + click opens project modal */}
 
-<div className="mt-24 md:mt-32 max-w-5xl mx-auto text-center">
+<div className="mt-24 md:mt-32 max-w-7xl mx-auto text-center px-6">
   <h2 className="text-2xl md:text-3xl font-logo italic text-[#f5f5dc] mb-8 text-center">
     Ключевые объекты портфолио VedArta
   </h2>
@@ -101,7 +101,7 @@ export const Portfolio: React.FC = () => {
     В портфолио VedArta собраны проекты разных масштабов — от компактных городских квартир до загородной архитектуры и курортных пространств. Но есть три объекта, которые стали важными точками формирования философии студии и отражают мой профессиональный путь как архитектора и дизайнера. Каждый из них — это не только реализованный проект, но и важный профессиональный опыт, который сформировал подход к работе с пространством, архитектурой и человеком.
   </p>
 
-  <div className="grid md:grid-cols-3 gap-8">
+  <div className="grid md:grid-cols-3 gap-10">
     {/* Smart Renovation */}
     <button
       type="button"
@@ -109,25 +109,26 @@ export const Portfolio: React.FC = () => {
         (document.getElementById("kp-smart") as HTMLDialogElement | null)?.showModal()
       }
       className="group relative overflow-hidden border border-[#ffcc00]/30 bg-black/10 text-left"
-      style={{ height: 420 }}
       aria-label="Открыть Смарт Реновация"
     >
       <img
         src="https://drive.google.com/thumbnail?id=1YJiS-K1PruDax_qnJj6AkEbTcMVYPNeP&sz=w1200"
         loading="lazy"
-        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+        className="w-full aspect-[4/5] object-cover transition-transform duration-700 group-hover:scale-105"
         alt="Смарт Реновация"
       />
 
-      {/* bottom hover overlay */}
-      <div className="absolute inset-x-0 bottom-0 translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition duration-300">
-        <div className="bg-black/60 backdrop-blur-sm p-5">
-          <span className="text-xs tracking-widest text-[#ffcc00] block mb-2">
-            CITY RENOVATION
-          </span>
-          <h3 className="text-lg text-white mb-2">Смарт Реновация</h3>
-          <span className="text-sm text-white/80">Изучить детали</span>
-        </div>
+      {/* overlay like portfolio */}
+      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/55 transition duration-500" />
+
+      <div className="absolute inset-x-0 bottom-0 p-6">
+        <span className="text-xs tracking-widest text-[#ffcc00] block mb-2">
+          CITY RENOVATION
+        </span>
+        <h3 className="text-lg text-white mb-1">Смарт Реновация</h3>
+        <span className="text-sm text-white/80 opacity-0 group-hover:opacity-100 transition">
+          Изучить детали
+        </span>
       </div>
     </button>
 
@@ -138,24 +139,25 @@ export const Portfolio: React.FC = () => {
         (document.getElementById("kp-elki") as HTMLDialogElement | null)?.showModal()
       }
       className="group relative overflow-hidden border border-[#ffcc00]/30 bg-black/10 text-left"
-      style={{ height: 420 }}
       aria-label="Открыть Elki"
     >
       <img
-        src="https://drive.google.com/uc?export=view&id=1ZfIumSFuOYdj647qJuSMF8WKou82XcEz"
+        src="https://drive.google.com/thumbnail?id=1ZfIumSFuOYdj647qJuSMF8WKou82XcEz&sz=w1200"
         loading="lazy"
-        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+        className="w-full aspect-[4/5] object-cover transition-transform duration-700 group-hover:scale-105"
         alt="Elki"
       />
 
-      <div className="absolute inset-x-0 bottom-0 translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition duration-300">
-        <div className="bg-black/60 backdrop-blur-sm p-5">
-          <span className="text-xs tracking-widest text-[#ffcc00] block mb-2">
-            FOREST RETREAT
-          </span>
-          <h3 className="text-lg text-white mb-2">Elki</h3>
-          <span className="text-sm text-white/80">Изучить детали</span>
-        </div>
+      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/55 transition duration-500" />
+
+      <div className="absolute inset-x-0 bottom-0 p-6">
+        <span className="text-xs tracking-widest text-[#ffcc00] block mb-2">
+          FOREST RETREAT
+        </span>
+        <h3 className="text-lg text-white mb-1">Elki</h3>
+        <span className="text-sm text-white/80 opacity-0 group-hover:opacity-100 transition">
+          Изучить детали
+        </span>
       </div>
     </button>
 
@@ -166,24 +168,25 @@ export const Portfolio: React.FC = () => {
         (document.getElementById("kp-atlantis") as HTMLDialogElement | null)?.showModal()
       }
       className="group relative overflow-hidden border border-[#ffcc00]/30 bg-black/10 text-left"
-      style={{ height: 420 }}
       aria-label="Открыть Atlantis"
     >
       <img
-        src="https://drive.google.com/uc?export=view&id=1yF4t7XD5FoRUKoDQjKQoJR--EJgcmTWW"
+        src="https://drive.google.com/thumbnail?id=1yF4t7XD5FoRUKoDQjKQoJR--EJgcmTWW&sz=w1200"
         loading="lazy"
-        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+        className="w-full aspect-[4/5] object-cover transition-transform duration-700 group-hover:scale-105"
         alt="Atlantis"
       />
 
-      <div className="absolute inset-x-0 bottom-0 translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition duration-300">
-        <div className="bg-black/60 backdrop-blur-sm p-5">
-          <span className="text-xs tracking-widest text-[#ffcc00] block mb-2">
-            LAKE RESORT
-          </span>
-          <h3 className="text-lg text-white mb-2">Atlantis</h3>
-          <span className="text-sm text-white/80">Изучить детали</span>
-        </div>
+      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/55 transition duration-500" />
+
+      <div className="absolute inset-x-0 bottom-0 p-6">
+        <span className="text-xs tracking-widest text-[#ffcc00] block mb-2">
+          LAKE RESORT
+        </span>
+        <h3 className="text-lg text-white mb-1">Atlantis</h3>
+        <span className="text-sm text-white/80 opacity-0 group-hover:opacity-100 transition">
+          Изучить детали
+        </span>
       </div>
     </button>
   </div>
@@ -194,13 +197,13 @@ export const Portfolio: React.FC = () => {
 {/* Smart Renovation */}
 <dialog
   id="kp-smart"
-  className="fixed inset-0 m-0 p-0 w-screen h-screen bg-transparent"
+  className="fixed inset-0 bg-black/70 p-4"
   onClick={(e) => {
     if (e.target === e.currentTarget) (e.currentTarget as HTMLDialogElement).close();
   }}
 >
-  <div className="min-h-screen w-screen bg-black/70 p-4 flex items-center justify-center">
-    <div className="relative w-full max-w-6xl bg-[#061b16] border border-[#ffcc00]/30 rounded-2xl overflow-hidden max-h-[90vh] overflow-y-auto">
+  <div className="mx-auto w-full max-w-6xl">
+    <div className="relative bg-[#061b16] border border-[#ffcc00]/30 rounded-2xl overflow-hidden max-h-[90vh] overflow-y-auto">
       <button
         type="button"
         onClick={() => (document.getElementById("kp-smart") as HTMLDialogElement | null)?.close()}
@@ -261,7 +264,7 @@ export const Portfolio: React.FC = () => {
             href="https://www.instagram.com/smart_renoveit?igsh=Y29hbGpxemZqNzF5"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center justify-center px-8 py-4 border border-[#ffcc00]/60 bg-[#ffcc00]/10 text-[#ffcc00] hover:bg-[#ffcc00]/20 transition rounded-lg animate-pulse"
+            className="inline-flex items-center justify-center px-8 py-4 border border-[#ffcc00]/60 bg-[#ffcc00]/10 text-[#ffcc00] hover:bg-[#ffcc00]/20 transition rounded-lg"
           >
             Посмотреть в профиле Instagram
           </a>
@@ -274,13 +277,13 @@ export const Portfolio: React.FC = () => {
 {/* Elki */}
 <dialog
   id="kp-elki"
-  className="fixed inset-0 m-0 p-0 w-screen h-screen bg-transparent"
+  className="fixed inset-0 bg-black/70 p-4"
   onClick={(e) => {
     if (e.target === e.currentTarget) (e.currentTarget as HTMLDialogElement).close();
   }}
 >
-  <div className="min-h-screen w-screen bg-black/70 p-4 flex items-center justify-center">
-    <div className="relative w-full max-w-6xl bg-[#061b16] border border-[#ffcc00]/30 rounded-2xl overflow-hidden max-h-[90vh] overflow-y-auto">
+  <div className="mx-auto w-full max-w-6xl">
+    <div className="relative bg-[#061b16] border border-[#ffcc00]/30 rounded-2xl overflow-hidden max-h-[90vh] overflow-y-auto">
       <button
         type="button"
         onClick={() => (document.getElementById("kp-elki") as HTMLDialogElement | null)?.close()}
@@ -341,7 +344,7 @@ export const Portfolio: React.FC = () => {
             href="https://www.instagram.com/elki.rent?igsh=MTVhMDhndmx5ZzY2eQ%3D%3D"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center justify-center px-8 py-4 border border-[#ffcc00]/60 bg-[#ffcc00]/10 text-[#ffcc00] hover:bg-[#ffcc00]/20 transition rounded-lg animate-pulse"
+            className="inline-flex items-center justify-center px-8 py-4 border border-[#ffcc00]/60 bg-[#ffcc00]/10 text-[#ffcc00] hover:bg-[#ffcc00]/20 transition rounded-lg"
           >
             Посмотреть в профиле Instagram
           </a>
@@ -354,13 +357,13 @@ export const Portfolio: React.FC = () => {
 {/* Atlantis */}
 <dialog
   id="kp-atlantis"
-  className="fixed inset-0 m-0 p-0 w-screen h-screen bg-transparent"
+  className="fixed inset-0 bg-black/70 p-4"
   onClick={(e) => {
     if (e.target === e.currentTarget) (e.currentTarget as HTMLDialogElement).close();
   }}
 >
-  <div className="min-h-screen w-screen bg-black/70 p-4 flex items-center justify-center">
-    <div className="relative w-full max-w-6xl bg-[#061b16] border border-[#ffcc00]/30 rounded-2xl overflow-hidden max-h-[90vh] overflow-y-auto">
+  <div className="mx-auto w-full max-w-6xl">
+    <div className="relative bg-[#061b16] border border-[#ffcc00]/30 rounded-2xl overflow-hidden max-h-[90vh] overflow-y-auto">
       <button
         type="button"
         onClick={() => (document.getElementById("kp-atlantis") as HTMLDialogElement | null)?.close()}
@@ -421,7 +424,7 @@ export const Portfolio: React.FC = () => {
             href="https://www.instagram.com/atlantis.kg?igsh=MWIzMG45aHZiaWpmNA%3D%3D"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center justify-center px-8 py-4 border border-[#ffcc00]/60 bg-[#ffcc00]/10 text-[#ffcc00] hover:bg-[#ffcc00]/20 transition rounded-lg animate-pulse"
+            className="inline-flex items-center justify-center px-8 py-4 border border-[#ffcc00]/60 bg-[#ffcc00]/10 text-[#ffcc00] hover:bg-[#ffcc00]/20 transition rounded-lg"
           >
             Посмотреть в профиле Instagram
           </a>
