@@ -92,8 +92,7 @@ export const Portfolio: React.FC = () => {
         </div>
        {/* KEY PROJECTS — hover like portfolio + click opens project modal */}
 
-{/* ===================== KEY PORTFOLIO OBJECTS ===================== */}
-<div className="mt-24 md:mt-32 max-w-6xl mx-auto text-center px-4">
+<div className="mt-24 md:mt-32 max-w-5xl mx-auto text-center">
   <h2 className="text-2xl md:text-3xl font-logo italic text-[#f5f5dc] mb-8 text-center">
     Ключевые объекты портфолио VedArta
   </h2>
@@ -101,39 +100,35 @@ export const Portfolio: React.FC = () => {
   <p className="text-sm md:text-base text-[#f5f5dc]/80 leading-relaxed mb-12 text-center max-w-3xl mx-auto">
     В портфолио VedArta собраны проекты разных масштабов — от компактных городских квартир до загородной архитектуры и курортных пространств.
     Но есть три объекта, которые стали важными точками формирования философии студии и отражают мой профессиональный путь как архитектора и дизайнера.
-    Каждый из них — это не только реализованный проект, но и важный профессиональный опыт, который сформировал подход к работе с пространством,
-    архитектурой и человеком.
+    Каждый из них — это не только реализованный проект, но и важный профессиональный опыт, который сформировал подход к работе с пространством, архитектурой и человеком.
   </p>
 
-  {/* cards (делаем по подаче как основной портфельный грид) */}
   <div className="grid md:grid-cols-3 gap-8">
     {/* Smart Renovation */}
     <button
       type="button"
-      onClick={() => (document.getElementById("kp-smart") as HTMLDialogElement | null)?.showModal()}
+      onClick={() =>
+        (document.getElementById("kp-smart") as HTMLDialogElement | null)?.showModal()
+      }
       className="group relative overflow-hidden border border-[#ffcc00]/30 bg-black/10 text-left"
-      style={{ height: 520 }}  // подгони под высоту карточек основного портфолио (если у тебя там ~520)
+      style={{ height: 520 }} // чтобы по высоте было ближе к “портфолио”
       aria-label="Открыть Смарт Реновация"
     >
       <img
         src="https://drive.google.com/thumbnail?id=1YJiS-K1PruDax_qnJj6AkEbTcMVYPNeP&sz=w1600"
         loading="lazy"
-        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         alt="Смарт Реновация"
       />
 
-      {/* overlay как в портфолио */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent opacity-90" />
-      <div className="absolute left-0 right-0 bottom-0 p-7">
-        <div className="text-[11px] tracking-[0.35em] text-[#ffcc00] uppercase mb-2">
-          CITY RENOVATION
-        </div>
-        <div className="text-2xl font-logo italic text-[#f5f5dc] leading-tight mb-3">
-          Смарт Реновация
-        </div>
-        <div className="text-xs tracking-[0.25em] text-[#f5f5dc]/70 uppercase flex items-center gap-3">
-          <span>Изучить детали</span>
-          <span className="h-px w-12 bg-[#ffcc00]/50" />
+      {/* bottom hover overlay (ТОЛЬКО снизу, ТОЛЬКО при hover) */}
+      <div className="absolute inset-x-0 bottom-0 opacity-0 group-hover:opacity-100 transition duration-300">
+        <div className="bg-black/55 backdrop-blur-sm p-5">
+          <span className="text-xs tracking-widest text-[#ffcc00] block mb-2">
+            CITY RENOVATION
+          </span>
+          <h3 className="text-lg text-white mb-2">Смарт Реновация</h3>
+          <span className="text-sm text-white/80">Изучить детали</span>
         </div>
       </div>
     </button>
@@ -141,7 +136,9 @@ export const Portfolio: React.FC = () => {
     {/* Elki */}
     <button
       type="button"
-      onClick={() => (document.getElementById("kp-elki") as HTMLDialogElement | null)?.showModal()}
+      onClick={() =>
+        (document.getElementById("kp-elki") as HTMLDialogElement | null)?.showModal()
+      }
       className="group relative overflow-hidden border border-[#ffcc00]/30 bg-black/10 text-left"
       style={{ height: 520 }}
       aria-label="Открыть Elki"
@@ -149,21 +146,17 @@ export const Portfolio: React.FC = () => {
       <img
         src="https://drive.google.com/thumbnail?id=1ZfIumSFuOYdj647qJuSMF8WKou82XcEz&sz=w1600"
         loading="lazy"
-        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         alt="Elki"
       />
 
-      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent opacity-90" />
-      <div className="absolute left-0 right-0 bottom-0 p-7">
-        <div className="text-[11px] tracking-[0.35em] text-[#ffcc00] uppercase mb-2">
-          FOREST RETREAT
-        </div>
-        <div className="text-2xl font-logo italic text-[#f5f5dc] leading-tight mb-3">
-          Elki
-        </div>
-        <div className="text-xs tracking-[0.25em] text-[#f5f5dc]/70 uppercase flex items-center gap-3">
-          <span>Изучить детали</span>
-          <span className="h-px w-12 bg-[#ffcc00]/50" />
+      <div className="absolute inset-x-0 bottom-0 opacity-0 group-hover:opacity-100 transition duration-300">
+        <div className="bg-black/55 backdrop-blur-sm p-5">
+          <span className="text-xs tracking-widest text-[#ffcc00] block mb-2">
+            FOREST RETREAT
+          </span>
+          <h3 className="text-lg text-white mb-2">Elki</h3>
+          <span className="text-sm text-white/80">Изучить детали</span>
         </div>
       </div>
     </button>
@@ -171,7 +164,9 @@ export const Portfolio: React.FC = () => {
     {/* Atlantis */}
     <button
       type="button"
-      onClick={() => (document.getElementById("kp-atlantis") as HTMLDialogElement | null)?.showModal()}
+      onClick={() =>
+        (document.getElementById("kp-atlantis") as HTMLDialogElement | null)?.showModal()
+      }
       className="group relative overflow-hidden border border-[#ffcc00]/30 bg-black/10 text-left"
       style={{ height: 520 }}
       aria-label="Открыть Atlantis"
@@ -179,112 +174,106 @@ export const Portfolio: React.FC = () => {
       <img
         src="https://drive.google.com/thumbnail?id=1yF4t7XD5FoRUKoDQjKQoJR--EJgcmTWW&sz=w1600"
         loading="lazy"
-        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         alt="Atlantis"
       />
 
-      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent opacity-90" />
-      <div className="absolute left-0 right-0 bottom-0 p-7">
-        <div className="text-[11px] tracking-[0.35em] text-[#ffcc00] uppercase mb-2">
-          LAKE RESORT
-        </div>
-        <div className="text-2xl font-logo italic text-[#f5f5dc] leading-tight mb-3">
-          Atlantis
-        </div>
-        <div className="text-xs tracking-[0.25em] text-[#f5f5dc]/70 uppercase flex items-center gap-3">
-          <span>Изучить детали</span>
-          <span className="h-px w-12 bg-[#ffcc00]/50" />
+      <div className="absolute inset-x-0 bottom-0 opacity-0 group-hover:opacity-100 transition duration-300">
+        <div className="bg-black/55 backdrop-blur-sm p-5">
+          <span className="text-xs tracking-widest text-[#ffcc00] block mb-2">
+            LAKE RESORT
+          </span>
+          <h3 className="text-lg text-white mb-2">Atlantis</h3>
+          <span className="text-sm text-white/80">Изучить детали</span>
         </div>
       </div>
     </button>
   </div>
 </div>
 
-{/* ===================== DIALOGS (без наложений/лишних скроллов) ===================== */}
+{/* ===================== FULLSCREEN DIALOGS (как у портфолио: 1 скролл, фулл-скрин) ===================== */}
 
 {/* Smart Renovation */}
 <dialog
   id="kp-smart"
-  className="fixed inset-0 m-0 p-0 w-screen h-screen bg-transparent overflow-hidden [&::backdrop]:bg-black/70"
+  className="fixed inset-0 m-0 p-0 w-screen h-screen bg-transparent"
   onClick={(e) => {
     if (e.target === e.currentTarget) (e.currentTarget as HTMLDialogElement).close();
   }}
 >
-  <div className="w-full h-full p-4 md:p-8 flex items-center justify-center">
-    <div className="relative w-full max-w-6xl bg-[#061b16] border border-[#ffcc00]/30 rounded-2xl overflow-hidden h-[90vh]">
-      {/* одна прокрутка — только тут */}
-      <div className="h-full overflow-y-auto overscroll-contain">
-        <div className="sticky top-0 z-10 bg-[#061b16]/90 backdrop-blur border-b border-[#ffcc00]/20">
-          <button
-            type="button"
-            onClick={() => (document.getElementById("kp-smart") as HTMLDialogElement | null)?.close()}
-            className="absolute top-4 right-4 w-10 h-10 rounded-full border border-[#ffcc00]/30 text-[#ffcc00] hover:bg-[#ffcc00]/10"
-            aria-label="Закрыть"
+  <div className="fixed inset-0 bg-black/70">
+    <div
+      className="w-screen h-screen bg-[#041a16] overflow-y-auto"
+      style={{ scrollbarWidth: "thin" as any }}
+      onClick={(e) => e.stopPropagation()}
+    >
+      <button
+        type="button"
+        onClick={() => (document.getElementById("kp-smart") as HTMLDialogElement | null)?.close()}
+        className="fixed top-6 right-6 z-[60] w-12 h-12 rounded-full border border-[#ffcc00]/30 text-[#ffcc00] hover:bg-[#ffcc00]/10"
+        aria-label="Закрыть"
+      >
+        ✕
+      </button>
+
+      <div className="max-w-6xl mx-auto px-6 md:px-10 py-10 md:py-14">
+        <div className="text-xs tracking-widest text-[#ffcc00] mb-3">CITY RENOVATION</div>
+        <h2 className="text-3xl md:text-5xl font-logo italic text-[#f5f5dc] leading-tight mb-10">
+          Smart Renovation / Saint-Petersburg
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-10">
+          <div className="md:col-span-1">
+            <div className="text-xs tracking-widest text-[#ffcc00] mb-3">ДНК ОБЪЕКТА</div>
+            <div className="text-xl md:text-2xl font-logo italic text-[#f5f5dc]">
+              Точность планировки. Рациональность. Умный метр как единица смысла.
+            </div>
+          </div>
+
+          <div className="md:col-span-2 grid md:grid-cols-2 gap-10">
+            <div>
+              <div className="text-xs tracking-widest text-[#ffcc00] mb-3">ЗАДАЧА</div>
+              <p className="text-sm md:text-base text-[#f5f5dc]/80 leading-relaxed">
+                Создать функциональное, светлое и визуально цельное пространство в небольшом метраже: максимум удобства, минимум лишнего.
+              </p>
+            </div>
+            <div>
+              <div className="text-xs tracking-widest text-[#ffcc00] mb-3">РЕШЕНИЕ</div>
+              <p className="text-sm md:text-base text-[#f5f5dc]/80 leading-relaxed">
+                Чёткое зонирование, встроенные системы хранения, выверенная геометрия мебели и света, спокойная современная палитра без визуального шума.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-12">
+          <div className="text-xs tracking-widest text-[#ffcc00] mb-4">ТАКТИЛЬНЫЙ КОД</div>
+          <div className="flex flex-wrap gap-3">
+            {["Микроцемент", "Светлый дуб", "Матовый металл", "Тёплый текстиль"].map((t) => (
+              <span
+                key={t}
+                className="border border-[#ffcc00]/30 px-3 py-2 text-[#ffcc00] text-xs tracking-widest"
+              >
+                {t}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-14">
+          <div className="text-xs tracking-widest text-[#ffcc00] mb-6">ВИЗУАЛЬНОЕ ВОПЛОЩЕНИЕ</div>
+
+          <a
+            href="https://www.instagram.com/smart_renoveit?igsh=Y29hbGpxemZqNzF5"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center justify-center px-8 py-4 border border-[#ffcc00]/60 bg-[#ffcc00]/10 text-[#ffcc00] hover:bg-[#ffcc00]/20 transition rounded-xl"
           >
-            ✕
-          </button>
-          <div className="p-8 md:p-10">
-            <div className="text-xs tracking-widest text-[#ffcc00] mb-3">CITY RENOVATION</div>
-            <h2 className="text-3xl md:text-5xl font-logo italic text-[#f5f5dc] leading-tight">
-              Smart Renovation / Saint-Petersburg
-            </h2>
-          </div>
+            Посмотреть в профиле Instagram
+          </a>
         </div>
 
-        <div className="p-8 md:p-10 pt-8">
-          <div className="grid md:grid-cols-3 gap-10">
-            <div className="md:col-span-1">
-              <div className="text-xs tracking-widest text-[#ffcc00] mb-3">ДНК ОБЪЕКТА</div>
-              <div className="text-xl md:text-2xl font-logo italic text-[#f5f5dc]">
-                Точность планировки. Рациональность. Умный метр как единица смысла.
-              </div>
-            </div>
-
-            <div className="md:col-span-2 grid md:grid-cols-2 gap-10">
-              <div>
-                <div className="text-xs tracking-widest text-[#ffcc00] mb-3">ЗАДАЧА</div>
-                <p className="text-sm md:text-base text-[#f5f5dc]/80 leading-relaxed">
-                  Создать функциональное, светлое и визуально цельное пространство в небольшом метраже:
-                  максимум удобства, минимум лишнего.
-                </p>
-              </div>
-              <div>
-                <div className="text-xs tracking-widest text-[#ffcc00] mb-3">РЕШЕНИЕ</div>
-                <p className="text-sm md:text-base text-[#f5f5dc]/80 leading-relaxed">
-                  Чёткое зонирование, встроенные системы хранения, выверенная геометрия мебели и света,
-                  спокойная современная палитра без визуального шума.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-10">
-            <div className="text-xs tracking-widest text-[#ffcc00] mb-4">ТАКТИЛЬНЫЙ КОД</div>
-            <div className="flex flex-wrap gap-3">
-              {["Микроцемент", "Светлый дуб", "Матовый металл", "Тёплый текстиль"].map((t) => (
-                <span
-                  key={t}
-                  className="border border-[#ffcc00]/30 px-3 py-2 text-[#ffcc00] text-xs tracking-widest"
-                >
-                  {t}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          <div className="mt-14 pb-10">
-            <div className="text-xs tracking-widest text-[#ffcc00] mb-6">ВИЗУАЛЬНОЕ ВОПЛОЩЕНИЕ</div>
-
-            <a
-              href="https://www.instagram.com/smart_renoveit?igsh=Y29hbGpxemZqNzF5"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center justify-center px-8 py-4 border border-[#ffcc00]/60 bg-[#ffcc00]/10 text-[#ffcc00] hover:bg-[#ffcc00]/20 transition rounded-lg"
-            >
-              Посмотреть в профиле Instagram
-            </a>
-          </div>
-        </div>
+        <div className="h-16" />
       </div>
     </div>
   </div>
@@ -293,84 +282,84 @@ export const Portfolio: React.FC = () => {
 {/* Elki */}
 <dialog
   id="kp-elki"
-  className="fixed inset-0 m-0 p-0 w-screen h-screen bg-transparent overflow-hidden [&::backdrop]:bg-black/70"
+  className="fixed inset-0 m-0 p-0 w-screen h-screen bg-transparent"
   onClick={(e) => {
     if (e.target === e.currentTarget) (e.currentTarget as HTMLDialogElement).close();
   }}
 >
-  <div className="w-full h-full p-4 md:p-8 flex items-center justify-center">
-    <div className="relative w-full max-w-6xl bg-[#061b16] border border-[#ffcc00]/30 rounded-2xl overflow-hidden h-[90vh]">
-      <div className="h-full overflow-y-auto overscroll-contain">
-        <div className="sticky top-0 z-10 bg-[#061b16]/90 backdrop-blur border-b border-[#ffcc00]/20">
-          <button
-            type="button"
-            onClick={() => (document.getElementById("kp-elki") as HTMLDialogElement | null)?.close()}
-            className="absolute top-4 right-4 w-10 h-10 rounded-full border border-[#ffcc00]/30 text-[#ffcc00] hover:bg-[#ffcc00]/10"
-            aria-label="Закрыть"
+  <div className="fixed inset-0 bg-black/70">
+    <div
+      className="w-screen h-screen bg-[#041a16] overflow-y-auto"
+      style={{ scrollbarWidth: "thin" as any }}
+      onClick={(e) => e.stopPropagation()}
+    >
+      <button
+        type="button"
+        onClick={() => (document.getElementById("kp-elki") as HTMLDialogElement | null)?.close()}
+        className="fixed top-6 right-6 z-[60] w-12 h-12 rounded-full border border-[#ffcc00]/30 text-[#ffcc00] hover:bg-[#ffcc00]/10"
+        aria-label="Закрыть"
+      >
+        ✕
+      </button>
+
+      <div className="max-w-6xl mx-auto px-6 md:px-10 py-10 md:py-14">
+        <div className="text-xs tracking-widest text-[#ffcc00] mb-3">FOREST RETREAT</div>
+        <h2 className="text-3xl md:text-5xl font-logo italic text-[#f5f5dc] leading-tight mb-10">
+          Elki / Forest Cottage
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-10">
+          <div className="md:col-span-1">
+            <div className="text-xs tracking-widest text-[#ffcc00] mb-3">ДНК ОБЪЕКТА</div>
+            <div className="text-xl md:text-2xl font-logo italic text-[#f5f5dc]">
+              Уют как сценарий. Дерево, мягкий свет и яркие цветовые акценты — чтобы отдыхался не только дом, но и человек.
+            </div>
+          </div>
+
+          <div className="md:col-span-2 grid md:grid-cols-2 gap-10">
+            <div>
+              <div className="text-xs tracking-widest text-[#ffcc00] mb-3">ЗАДАЧА</div>
+              <p className="text-sm md:text-base text-[#f5f5dc]/80 leading-relaxed">
+                Собрать атмосферу загородного отдыха: тепло, тактильность, ощущение “своего места” с характером.
+              </p>
+            </div>
+            <div>
+              <div className="text-xs tracking-widest text-[#ffcc00] mb-3">РЕШЕНИЕ</div>
+              <p className="text-sm md:text-base text-[#f5f5dc]/80 leading-relaxed">
+                Натуральные материалы, мягкие фактуры, тёплое освещение, акценты в декоре и текстиле, которые оживляют интерьер и делают его запоминающимся.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-12">
+          <div className="text-xs tracking-widest text-[#ffcc00] mb-4">ТАКТИЛЬНЫЙ КОД</div>
+          <div className="flex flex-wrap gap-3">
+            {["Натуральное дерево", "Тёплый текстиль", "Яркие акценты", "Мягкий свет"].map((t) => (
+              <span
+                key={t}
+                className="border border-[#ffcc00]/30 px-3 py-2 text-[#ffcc00] text-xs tracking-widest"
+              >
+                {t}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-14">
+          <div className="text-xs tracking-widest text-[#ffcc00] mb-6">ВИЗУАЛЬНОЕ ВОПЛОЩЕНИЕ</div>
+
+          <a
+            href="https://www.instagram.com/elki.rent?igsh=MTVhMDhndmx5ZzY2eQ%3D%3D"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center justify-center px-8 py-4 border border-[#ffcc00]/60 bg-[#ffcc00]/10 text-[#ffcc00] hover:bg-[#ffcc00]/20 transition rounded-xl"
           >
-            ✕
-          </button>
-          <div className="p-8 md:p-10">
-            <div className="text-xs tracking-widest text-[#ffcc00] mb-3">FOREST RETREAT</div>
-            <h2 className="text-3xl md:text-5xl font-logo italic text-[#f5f5dc] leading-tight">
-              Elki / Forest Cottage
-            </h2>
-          </div>
+            Посмотреть в профиле Instagram
+          </a>
         </div>
 
-        <div className="p-8 md:p-10 pt-8">
-          <div className="grid md:grid-cols-3 gap-10">
-            <div className="md:col-span-1">
-              <div className="text-xs tracking-widest text-[#ffcc00] mb-3">ДНК ОБЪЕКТА</div>
-              <div className="text-xl md:text-2xl font-logo italic text-[#f5f5dc]">
-                Уют как сценарий. Дерево, мягкий свет и яркие цветовые акценты — чтобы отдыхался не только дом, но и человек.
-              </div>
-            </div>
-
-            <div className="md:col-span-2 grid md:grid-cols-2 gap-10">
-              <div>
-                <div className="text-xs tracking-widest text-[#ffcc00] mb-3">ЗАДАЧА</div>
-                <p className="text-sm md:text-base text-[#f5f5dc]/80 leading-relaxed">
-                  Собрать атмосферу загородного отдыха: тепло, тактильность, ощущение “своего места” с характером.
-                </p>
-              </div>
-              <div>
-                <div className="text-xs tracking-widest text-[#ffcc00] mb-3">РЕШЕНИЕ</div>
-                <p className="text-sm md:text-base text-[#f5f5dc]/80 leading-relaxed">
-                  Натуральные материалы, мягкие фактуры, тёплое освещение, акценты в декоре и текстиле,
-                  которые оживляют интерьер и делают его запоминающимся.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-10">
-            <div className="text-xs tracking-widest text-[#ffcc00] mb-4">ТАКТИЛЬНЫЙ КОД</div>
-            <div className="flex flex-wrap gap-3">
-              {["Натуральное дерево", "Тёплый текстиль", "Яркие акценты", "Мягкий свет"].map((t) => (
-                <span
-                  key={t}
-                  className="border border-[#ffcc00]/30 px-3 py-2 text-[#ffcc00] text-xs tracking-widest"
-                >
-                  {t}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          <div className="mt-14 pb-10">
-            <div className="text-xs tracking-widest text-[#ffcc00] mb-6">ВИЗУАЛЬНОЕ ВОПЛОЩЕНИЕ</div>
-
-            <a
-              href="https://www.instagram.com/elki.rent?igsh=MTVhMDhndmx5ZzY2eQ%3D%3D"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center justify-center px-8 py-4 border border-[#ffcc00]/60 bg-[#ffcc00]/10 text-[#ffcc00] hover:bg-[#ffcc00]/20 transition rounded-lg"
-            >
-              Посмотреть в профиле Instagram
-            </a>
-          </div>
-        </div>
+        <div className="h-16" />
       </div>
     </div>
   </div>
@@ -379,84 +368,86 @@ export const Portfolio: React.FC = () => {
 {/* Atlantis */}
 <dialog
   id="kp-atlantis"
-  className="fixed inset-0 m-0 p-0 w-screen h-screen bg-transparent overflow-hidden [&::backdrop]:bg-black/70"
+  className="fixed inset-0 m-0 p-0 w-screen h-screen bg-transparent"
   onClick={(e) => {
     if (e.target === e.currentTarget) (e.currentTarget as HTMLDialogElement).close();
   }}
 >
-  <div className="w-full h-full p-4 md:p-8 flex items-center justify-center">
-    <div className="relative w-full max-w-6xl bg-[#061b16] border border-[#ffcc00]/30 rounded-2xl overflow-hidden h-[90vh]">
-      <div className="h-full overflow-y-auto overscroll-contain">
-        <div className="sticky top-0 z-10 bg-[#061b16]/90 backdrop-blur border-b border-[#ffcc00]/20">
-          <button
-            type="button"
-            onClick={() => (document.getElementById("kp-atlantis") as HTMLDialogElement | null)?.close()}
-            className="absolute top-4 right-4 w-10 h-10 rounded-full border border-[#ffcc00]/30 text-[#ffcc00] hover:bg-[#ffcc00]/10"
-            aria-label="Закрыть"
+  <div className="fixed inset-0 bg-black/70">
+    <div
+      className="w-screen h-screen bg-[#041a16] overflow-y-auto"
+      style={{ scrollbarWidth: "thin" as any }}
+      onClick={(e) => e.stopPropagation()}
+    >
+      <button
+        type="button"
+        onClick={() =>
+          (document.getElementById("kp-atlantis") as HTMLDialogElement | null)?.close()
+        }
+        className="fixed top-6 right-6 z-[60] w-12 h-12 rounded-full border border-[#ffcc00]/30 text-[#ffcc00] hover:bg-[#ffcc00]/10"
+        aria-label="Закрыть"
+      >
+        ✕
+      </button>
+
+      <div className="max-w-6xl mx-auto px-6 md:px-10 py-10 md:py-14">
+        <div className="text-xs tracking-widest text-[#ffcc00] mb-3">LAKE RESORT</div>
+        <h2 className="text-3xl md:text-5xl font-logo italic text-[#f5f5dc] leading-tight mb-10">
+          Atlantis / Issyk-Kul
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-10">
+          <div className="md:col-span-1">
+            <div className="text-xs tracking-widest text-[#ffcc00] mb-3">ДНК ОБЪЕКТА</div>
+            <div className="text-xl md:text-2xl font-logo italic text-[#f5f5dc]">
+              Курортная свобода. Воздух и горизонт. Интерьер, который поддерживает отдых, не споря с природой.
+            </div>
+          </div>
+
+          <div className="md:col-span-2 grid md:grid-cols-2 gap-10">
+            <div>
+              <div className="text-xs tracking-widest text-[#ffcc00] mb-3">ЗАДАЧА</div>
+              <p className="text-sm md:text-base text-[#f5f5dc]/80 leading-relaxed">
+                Создать лёгкое, современное пространство для отдыха у воды: ощущение простора, чистоты линий и спокойствия.
+              </p>
+            </div>
+            <div>
+              <div className="text-xs tracking-widest text-[#ffcc00] mb-3">РЕШЕНИЕ</div>
+              <p className="text-sm md:text-base text-[#f5f5dc]/80 leading-relaxed">
+                Светлая база, естественные оттенки, акцент на видовые оси, лаконичная мебель и сценарный свет — чтобы дом “дышал” и выглядел дорого.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-12">
+          <div className="text-xs tracking-widest text-[#ffcc00] mb-4">ТАКТИЛЬНЫЙ КОД</div>
+          <div className="flex flex-wrap gap-3">
+            {["Светлый камень", "Дерево", "Стекло", "Лён"].map((t) => (
+              <span
+                key={t}
+                className="border border-[#ffcc00]/30 px-3 py-2 text-[#ffcc00] text-xs tracking-widest"
+              >
+                {t}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-14">
+          <div className="text-xs tracking-widest text-[#ffcc00] mb-6">ВИЗУАЛЬНОЕ ВОПЛОЩЕНИЕ</div>
+
+          <a
+            href="https://www.instagram.com/atlantis.kg?igsh=MWIzMG45aHZiaWpmNA%3D%3D"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center justify-center px-8 py-4 border border-[#ffcc00]/60 bg-[#ffcc00]/10 text-[#ffcc00] hover:bg-[#ffcc00]/20 transition rounded-xl"
           >
-            ✕
-          </button>
-          <div className="p-8 md:p-10">
-            <div className="text-xs tracking-widest text-[#ffcc00] mb-3">LAKE RESORT</div>
-            <h2 className="text-3xl md:text-5xl font-logo italic text-[#f5f5dc] leading-tight">
-              Atlantis / Issyk-Kul
-            </h2>
-          </div>
+            Посмотреть в профиле Instagram
+          </a>
         </div>
 
-        <div className="p-8 md:p-10 pt-8">
-          <div className="grid md:grid-cols-3 gap-10">
-            <div className="md:col-span-1">
-              <div className="text-xs tracking-widest text-[#ffcc00] mb-3">ДНК ОБЪЕКТА</div>
-              <div className="text-xl md:text-2xl font-logo italic text-[#f5f5dc]">
-                Курортная свобода. Воздух и горизонт. Интерьер, который поддерживает отдых, не споря с природой.
-              </div>
-            </div>
-
-            <div className="md:col-span-2 grid md:grid-cols-2 gap-10">
-              <div>
-                <div className="text-xs tracking-widest text-[#ffcc00] mb-3">ЗАДАЧА</div>
-                <p className="text-sm md:text-base text-[#f5f5dc]/80 leading-relaxed">
-                  Создать лёгкое, современное пространство для отдыха у воды: ощущение простора, чистоты линий и спокойствия.
-                </p>
-              </div>
-              <div>
-                <div className="text-xs tracking-widest text-[#ffcc00] mb-3">РЕШЕНИЕ</div>
-                <p className="text-sm md:text-base text-[#f5f5dc]/80 leading-relaxed">
-                  Светлая база, естественные оттенки, акцент на видовые оси, лаконичная мебель и сценарный свет —
-                  чтобы дом “дышал” и выглядел дорого.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-10">
-            <div className="text-xs tracking-widest text-[#ffcc00] mb-4">ТАКТИЛЬНЫЙ КОД</div>
-            <div className="flex flex-wrap gap-3">
-              {["Светлый камень", "Дерево", "Стекло", "Лён"].map((t) => (
-                <span
-                  key={t}
-                  className="border border-[#ffcc00]/30 px-3 py-2 text-[#ffcc00] text-xs tracking-widest"
-                >
-                  {t}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          <div className="mt-14 pb-10">
-            <div className="text-xs tracking-widest text-[#ffcc00] mb-6">ВИЗУАЛЬНОЕ ВОПЛОЩЕНИЕ</div>
-
-            <a
-              href="https://www.instagram.com/atlantis.kg?igsh=MWIzMG45aHZiaWpmNA%3D%3D"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center justify-center px-8 py-4 border border-[#ffcc00]/60 bg-[#ffcc00]/10 text-[#ffcc00] hover:bg-[#ffcc00]/20 transition rounded-lg"
-            >
-              Посмотреть в профиле Instagram
-            </a>
-          </div>
-        </div>
+        <div className="h-16" />
       </div>
     </div>
   </div>
