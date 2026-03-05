@@ -92,365 +92,280 @@ export const Portfolio: React.FC = () => {
         </div>
        {/* KEY PROJECTS — hover like portfolio + click opens project modal */}
 
-<div className="mt-24 md:mt-32 max-w-5xl mx-auto text-center">
-  <h2 className="text-2xl md:text-3xl font-logo italic text-[#f5f5dc] mb-8 text-center">
-    Ключевые объекты портфолио VedArta
-  </h2>
+{/* ===================== KEY PROJECTS ===================== */}
 
-  <p className="text-sm md:text-base text-[#f5f5dc]/80 leading-relaxed mb-12 text-center max-w-3xl mx-auto">
-    В портфолио VedArta собраны проекты разных масштабов — от компактных городских квартир до загородной архитектуры и курортных пространств.
-    Но есть три объекта, которые стали важными точками формирования философии студии и отражают мой профессиональный путь как архитектора и дизайнера.
-    Каждый из них — это не только реализованный проект, но и важный профессиональный опыт, который сформировал подход к работе с пространством, архитектурой и человеком.
-  </p>
+<div className="mt-24 md:mt-32 max-w-6xl mx-auto px-4">
 
-  <div className="grid md:grid-cols-3 gap-8">
-    {/* Smart Renovation */}
-    <button
-      type="button"
-      onClick={() =>
-        (document.getElementById("kp-smart") as HTMLDialogElement | null)?.showModal()
-      }
-      className="group relative overflow-hidden border border-[#ffcc00]/30 bg-black/10 text-left"
-      style={{ height: 520 }} // чтобы по высоте было ближе к “портфолио”
-      aria-label="Открыть Смарт Реновация"
-    >
-      <img
-        src="https://drive.google.com/thumbnail?id=1YJiS-K1PruDax_qnJj6AkEbTcMVYPNeP&sz=w1600"
-        loading="lazy"
-        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-        alt="Смарт Реновация"
-      />
+<h2 className="text-2xl md:text-3xl font-logo italic text-[#f5f5dc] mb-10 text-center">
+Ключевые объекты портфолио VedArta
+</h2>
 
-      {/* bottom hover overlay (ТОЛЬКО снизу, ТОЛЬКО при hover) */}
-      <div className="absolute inset-x-0 bottom-0 opacity-0 group-hover:opacity-100 transition duration-300">
-        <div className="bg-black/55 backdrop-blur-sm p-5">
-          <span className="text-xs tracking-widest text-[#ffcc00] block mb-2">
-            CITY RENOVATION
-          </span>
-          <h3 className="text-lg text-white mb-2">Смарт Реновация</h3>
-          <span className="text-sm text-white/80">Изучить детали</span>
-        </div>
-      </div>
-    </button>
+<p className="text-[#f5f5dc]/80 text-center max-w-3xl mx-auto mb-14 leading-relaxed">
+В портфолио VedArta собраны проекты разных масштабов — от компактных городских квартир
+до загородной архитектуры и курортных пространств.  
+Но есть три объекта, которые стали важными точками формирования философии студии
+и отражают мой профессиональный путь как архитектора и дизайнера.
+</p>
 
-    {/* Elki */}
-    <button
-      type="button"
-      onClick={() =>
-        (document.getElementById("kp-elki") as HTMLDialogElement | null)?.showModal()
-      }
-      className="group relative overflow-hidden border border-[#ffcc00]/30 bg-black/10 text-left"
-      style={{ height: 520 }}
-      aria-label="Открыть Elki"
-    >
-      <img
-        src="https://drive.google.com/thumbnail?id=1ZfIumSFuOYdj647qJuSMF8WKou82XcEz&sz=w1600"
-        loading="lazy"
-        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-        alt="Elki"
-      />
+<div className="grid md:grid-cols-3 gap-8">
 
-      <div className="absolute inset-x-0 bottom-0 opacity-0 group-hover:opacity-100 transition duration-300">
-        <div className="bg-black/55 backdrop-blur-sm p-5">
-          <span className="text-xs tracking-widest text-[#ffcc00] block mb-2">
-            FOREST RETREAT
-          </span>
-          <h3 className="text-lg text-white mb-2">Elki</h3>
-          <span className="text-sm text-white/80">Изучить детали</span>
-        </div>
-      </div>
-    </button>
+{/* SMART */}
 
-    {/* Atlantis */}
-    <button
-      type="button"
-      onClick={() =>
-        (document.getElementById("kp-atlantis") as HTMLDialogElement | null)?.showModal()
-      }
-      className="group relative overflow-hidden border border-[#ffcc00]/30 bg-black/10 text-left"
-      style={{ height: 520 }}
-      aria-label="Открыть Atlantis"
-    >
-      <img
-        src="https://drive.google.com/thumbnail?id=1yF4t7XD5FoRUKoDQjKQoJR--EJgcmTWW&sz=w1600"
-        loading="lazy"
-        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-        alt="Atlantis"
-      />
+<button
+onClick={() => (document.getElementById("kp-smart") as HTMLDialogElement).showModal()}
+className="group relative overflow-hidden border border-[#ffcc00]/30"
+style={{height:520}}
+>
 
-      <div className="absolute inset-x-0 bottom-0 opacity-0 group-hover:opacity-100 transition duration-300">
-        <div className="bg-black/55 backdrop-blur-sm p-5">
-          <span className="text-xs tracking-widest text-[#ffcc00] block mb-2">
-            LAKE RESORT
-          </span>
-          <h3 className="text-lg text-white mb-2">Atlantis</h3>
-          <span className="text-sm text-white/80">Изучить детали</span>
-        </div>
-      </div>
-    </button>
-  </div>
+<img
+src="https://drive.google.com/thumbnail?id=1YJiS-K1PruDax_qnJj6AkEbTcMVYPNeP&sz=w1200"
+className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+/>
+
+<div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition">
+<div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+
+<div className="absolute bottom-0 left-0 p-6">
+<div className="text-xs tracking-widest text-[#ffcc00] mb-2">
+CITY RENOVATION
 </div>
 
-{/* ===================== FULLSCREEN DIALOGS (как у портфолио: 1 скролл, фулл-скрин) ===================== */}
+<div className="text-white text-lg">
+Смарт Реновация
+</div>
 
-{/* Smart Renovation */}
-<dialog
-  id="kp-smart"
-  className="fixed inset-0 m-0 p-0 w-screen h-screen bg-transparent"
-  onClick={(e) => {
-    if (e.target === e.currentTarget) (e.currentTarget as HTMLDialogElement).close();
-  }}
+<div className="text-white/80 text-sm mt-2">
+Изучить детали
+</div>
+</div>
+</div>
+
+</button>
+
+
+{/* ELKI */}
+
+<button
+onClick={() => (document.getElementById("kp-elki") as HTMLDialogElement).showModal()}
+className="group relative overflow-hidden border border-[#ffcc00]/30"
+style={{height:520}}
 >
-  <div className="fixed inset-0 bg-black/70">
-    <div
-      className="w-screen h-screen bg-[#041a16] overflow-y-auto"
-      style={{ scrollbarWidth: "thin" as any }}
-      onClick={(e) => e.stopPropagation()}
-    >
-      <button
-        type="button"
-        onClick={() => (document.getElementById("kp-smart") as HTMLDialogElement | null)?.close()}
-        className="fixed top-6 right-6 z-[60] w-12 h-12 rounded-full border border-[#ffcc00]/30 text-[#ffcc00] hover:bg-[#ffcc00]/10"
-        aria-label="Закрыть"
-      >
-        ✕
-      </button>
 
-      <div className="max-w-6xl mx-auto px-6 md:px-10 py-10 md:py-14">
-        <div className="text-xs tracking-widest text-[#ffcc00] mb-3">CITY RENOVATION</div>
-        <h2 className="text-3xl md:text-5xl font-logo italic text-[#f5f5dc] leading-tight mb-10">
-          Smart Renovation / Saint-Petersburg
-        </h2>
+<img
+src="https://drive.google.com/uc?export=view&id=1ZfIumSFuOYdj647qJuSMF8WKou82XcEz"
+className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+/>
 
-        <div className="grid md:grid-cols-3 gap-10">
-          <div className="md:col-span-1">
-            <div className="text-xs tracking-widest text-[#ffcc00] mb-3">ДНК ОБЪЕКТА</div>
-            <div className="text-xl md:text-2xl font-logo italic text-[#f5f5dc]">
-              Точность планировки. Рациональность. Умный метр как единица смысла.
-            </div>
-          </div>
+<div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition">
+<div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
-          <div className="md:col-span-2 grid md:grid-cols-2 gap-10">
-            <div>
-              <div className="text-xs tracking-widest text-[#ffcc00] mb-3">ЗАДАЧА</div>
-              <p className="text-sm md:text-base text-[#f5f5dc]/80 leading-relaxed">
-                Создать функциональное, светлое и визуально цельное пространство в небольшом метраже: максимум удобства, минимум лишнего.
-              </p>
-            </div>
-            <div>
-              <div className="text-xs tracking-widest text-[#ffcc00] mb-3">РЕШЕНИЕ</div>
-              <p className="text-sm md:text-base text-[#f5f5dc]/80 leading-relaxed">
-                Чёткое зонирование, встроенные системы хранения, выверенная геометрия мебели и света, спокойная современная палитра без визуального шума.
-              </p>
-            </div>
-          </div>
-        </div>
+<div className="absolute bottom-0 left-0 p-6">
+<div className="text-xs tracking-widest text-[#ffcc00] mb-2">
+FOREST RETREAT
+</div>
 
-        <div className="mt-12">
-          <div className="text-xs tracking-widest text-[#ffcc00] mb-4">ТАКТИЛЬНЫЙ КОД</div>
-          <div className="flex flex-wrap gap-3">
-            {["Микроцемент", "Светлый дуб", "Матовый металл", "Тёплый текстиль"].map((t) => (
-              <span
-                key={t}
-                className="border border-[#ffcc00]/30 px-3 py-2 text-[#ffcc00] text-xs tracking-widest"
-              >
-                {t}
-              </span>
-            ))}
-          </div>
-        </div>
+<div className="text-white text-lg">
+Elki
+</div>
 
-        <div className="mt-14">
-          <div className="text-xs tracking-widest text-[#ffcc00] mb-6">ВИЗУАЛЬНОЕ ВОПЛОЩЕНИЕ</div>
+<div className="text-white/80 text-sm mt-2">
+Изучить детали
+</div>
+</div>
+</div>
 
-          <a
-            href="https://www.instagram.com/smart_renoveit?igsh=Y29hbGpxemZqNzF5"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center justify-center px-8 py-4 border border-[#ffcc00]/60 bg-[#ffcc00]/10 text-[#ffcc00] hover:bg-[#ffcc00]/20 transition rounded-xl"
-          >
-            Посмотреть в профиле Instagram
-          </a>
-        </div>
+</button>
 
-        <div className="h-16" />
-      </div>
-    </div>
-  </div>
+
+{/* ATLANTIS */}
+
+<button
+onClick={() => (document.getElementById("kp-atlantis") as HTMLDialogElement).showModal()}
+className="group relative overflow-hidden border border-[#ffcc00]/30"
+style={{height:520}}
+>
+
+<img
+src="https://drive.google.com/uc?export=view&id=1yF4t7XD5FoRUKoDQjKQoJR--EJgcmTWW"
+className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+/>
+
+<div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition">
+<div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+
+<div className="absolute bottom-0 left-0 p-6">
+<div className="text-xs tracking-widest text-[#ffcc00] mb-2">
+LAKE RESORT
+</div>
+
+<div className="text-white text-lg">
+Atlantis
+</div>
+
+<div className="text-white/80 text-sm mt-2">
+Изучить детали
+</div>
+</div>
+</div>
+
+</button>
+
+</div>
+</div>
+
+
+{/* ===================== DIALOG SMART ===================== */}
+
+<dialog id="kp-smart" className="fixed inset-0 w-screen h-screen bg-black/70">
+
+<div className="absolute inset-0 flex">
+
+<div
+className="absolute inset-0"
+onClick={() => (document.getElementById("kp-smart") as HTMLDialogElement).close()}
+/>
+
+<div className="relative w-full h-full bg-[#061b16] overflow-y-auto border border-[#ffcc00]/30">
+
+<button
+onClick={() => (document.getElementById("kp-smart") as HTMLDialogElement).close()}
+className="fixed top-6 right-6 w-12 h-12 border border-[#ffcc00]/40 text-[#ffcc00]"
+>
+✕
+</button>
+
+<div className="px-10 md:px-20 py-14 max-w-6xl mx-auto">
+
+<div className="text-xs tracking-widest text-[#ffcc00] mb-4">
+CITY RENOVATION
+</div>
+
+<h2 className="text-4xl md:text-5xl font-logo italic text-[#f5f5dc] mb-10">
+Smart Renovation / Saint Petersburg
+</h2>
+
+<p className="text-[#f5f5dc]/80 leading-relaxed mb-10">
+Компактная квартира, в которой каждый метр работает.
+Рациональная планировка, встроенные системы хранения
+и нейтральная архитектурная палитра.
+</p>
+
+<a
+href="https://www.instagram.com/smart_renoveit"
+target="_blank"
+className="border border-[#ffcc00]/60 px-12 py-4 text-[#ffcc00] tracking-widest
+hover:bg-[#ffcc00]/10 transition"
+>
+Посмотреть в профиле Instagram
+</a>
+
+</div>
+</div>
+</div>
 </dialog>
 
-{/* Elki */}
-<dialog
-  id="kp-elki"
-  className="fixed inset-0 m-0 p-0 w-screen h-screen bg-transparent"
-  onClick={(e) => {
-    if (e.target === e.currentTarget) (e.currentTarget as HTMLDialogElement).close();
-  }}
+
+
+{/* ===================== DIALOG ELKI ===================== */}
+
+<dialog id="kp-elki" className="fixed inset-0 w-screen h-screen bg-black/70">
+
+<div className="absolute inset-0 flex">
+
+<div
+className="absolute inset-0"
+onClick={() => (document.getElementById("kp-elki") as HTMLDialogElement).close()}
+/>
+
+<div className="relative w-full h-full bg-[#061b16] overflow-y-auto border border-[#ffcc00]/30">
+
+<button
+onClick={() => (document.getElementById("kp-elki") as HTMLDialogElement).close()}
+className="fixed top-6 right-6 w-12 h-12 border border-[#ffcc00]/40 text-[#ffcc00]"
 >
-  <div className="fixed inset-0 bg-black/70">
-    <div
-      className="w-screen h-screen bg-[#041a16] overflow-y-auto"
-      style={{ scrollbarWidth: "thin" as any }}
-      onClick={(e) => e.stopPropagation()}
-    >
-      <button
-        type="button"
-        onClick={() => (document.getElementById("kp-elki") as HTMLDialogElement | null)?.close()}
-        className="fixed top-6 right-6 z-[60] w-12 h-12 rounded-full border border-[#ffcc00]/30 text-[#ffcc00] hover:bg-[#ffcc00]/10"
-        aria-label="Закрыть"
-      >
-        ✕
-      </button>
+✕
+</button>
 
-      <div className="max-w-6xl mx-auto px-6 md:px-10 py-10 md:py-14">
-        <div className="text-xs tracking-widest text-[#ffcc00] mb-3">FOREST RETREAT</div>
-        <h2 className="text-3xl md:text-5xl font-logo italic text-[#f5f5dc] leading-tight mb-10">
-          Elki / Forest Cottage
-        </h2>
+<div className="px-10 md:px-20 py-14 max-w-6xl mx-auto">
 
-        <div className="grid md:grid-cols-3 gap-10">
-          <div className="md:col-span-1">
-            <div className="text-xs tracking-widest text-[#ffcc00] mb-3">ДНК ОБЪЕКТА</div>
-            <div className="text-xl md:text-2xl font-logo italic text-[#f5f5dc]">
-              Уют как сценарий. Дерево, мягкий свет и яркие цветовые акценты — чтобы отдыхался не только дом, но и человек.
-            </div>
-          </div>
+<div className="text-xs tracking-widest text-[#ffcc00] mb-4">
+FOREST RETREAT
+</div>
 
-          <div className="md:col-span-2 grid md:grid-cols-2 gap-10">
-            <div>
-              <div className="text-xs tracking-widest text-[#ffcc00] mb-3">ЗАДАЧА</div>
-              <p className="text-sm md:text-base text-[#f5f5dc]/80 leading-relaxed">
-                Собрать атмосферу загородного отдыха: тепло, тактильность, ощущение “своего места” с характером.
-              </p>
-            </div>
-            <div>
-              <div className="text-xs tracking-widest text-[#ffcc00] mb-3">РЕШЕНИЕ</div>
-              <p className="text-sm md:text-base text-[#f5f5dc]/80 leading-relaxed">
-                Натуральные материалы, мягкие фактуры, тёплое освещение, акценты в декоре и текстиле, которые оживляют интерьер и делают его запоминающимся.
-              </p>
-            </div>
-          </div>
-        </div>
+<h2 className="text-4xl md:text-5xl font-logo italic text-[#f5f5dc] mb-10">
+Elki / Forest Cottage
+</h2>
 
-        <div className="mt-12">
-          <div className="text-xs tracking-widest text-[#ffcc00] mb-4">ТАКТИЛЬНЫЙ КОД</div>
-          <div className="flex flex-wrap gap-3">
-            {["Натуральное дерево", "Тёплый текстиль", "Яркие акценты", "Мягкий свет"].map((t) => (
-              <span
-                key={t}
-                className="border border-[#ffcc00]/30 px-3 py-2 text-[#ffcc00] text-xs tracking-widest"
-              >
-                {t}
-              </span>
-            ))}
-          </div>
-        </div>
+<p className="text-[#f5f5dc]/80 leading-relaxed mb-10">
+Загородное пространство отдыха, в котором дом
+становится частью природной среды.
+Дерево, мягкий свет и уютная атмосфера.
+</p>
 
-        <div className="mt-14">
-          <div className="text-xs tracking-widest text-[#ffcc00] mb-6">ВИЗУАЛЬНОЕ ВОПЛОЩЕНИЕ</div>
+<a
+href="https://www.instagram.com/elki.rent"
+target="_blank"
+className="border border-[#ffcc00]/60 px-12 py-4 text-[#ffcc00] tracking-widest
+hover:bg-[#ffcc00]/10 transition"
+>
+Посмотреть в профиле Instagram
+</a>
 
-          <a
-            href="https://www.instagram.com/elki.rent?igsh=MTVhMDhndmx5ZzY2eQ%3D%3D"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center justify-center px-8 py-4 border border-[#ffcc00]/60 bg-[#ffcc00]/10 text-[#ffcc00] hover:bg-[#ffcc00]/20 transition rounded-xl"
-          >
-            Посмотреть в профиле Instagram
-          </a>
-        </div>
-
-        <div className="h-16" />
-      </div>
-    </div>
-  </div>
+</div>
+</div>
+</div>
 </dialog>
 
-{/* Atlantis */}
-<dialog
-  id="kp-atlantis"
-  className="fixed inset-0 m-0 p-0 w-screen h-screen bg-transparent"
-  onClick={(e) => {
-    if (e.target === e.currentTarget) (e.currentTarget as HTMLDialogElement).close();
-  }}
+
+
+{/* ===================== DIALOG ATLANTIS ===================== */}
+
+<dialog id="kp-atlantis" className="fixed inset-0 w-screen h-screen bg-black/70">
+
+<div className="absolute inset-0 flex">
+
+<div
+className="absolute inset-0"
+onClick={() => (document.getElementById("kp-atlantis") as HTMLDialogElement).close()}
+/>
+
+<div className="relative w-full h-full bg-[#061b16] overflow-y-auto border border-[#ffcc00]/30">
+
+<button
+onClick={() => (document.getElementById("kp-atlantis") as HTMLDialogElement).close()}
+className="fixed top-6 right-6 w-12 h-12 border border-[#ffcc00]/40 text-[#ffcc00]"
 >
-  <div className="fixed inset-0 bg-black/70">
-    <div
-      className="w-screen h-screen bg-[#041a16] overflow-y-auto"
-      style={{ scrollbarWidth: "thin" as any }}
-      onClick={(e) => e.stopPropagation()}
-    >
-      <button
-        type="button"
-        onClick={() =>
-          (document.getElementById("kp-atlantis") as HTMLDialogElement | null)?.close()
-        }
-        className="fixed top-6 right-6 z-[60] w-12 h-12 rounded-full border border-[#ffcc00]/30 text-[#ffcc00] hover:bg-[#ffcc00]/10"
-        aria-label="Закрыть"
-      >
-        ✕
-      </button>
+✕
+</button>
 
-      <div className="max-w-6xl mx-auto px-6 md:px-10 py-10 md:py-14">
-        <div className="text-xs tracking-widest text-[#ffcc00] mb-3">LAKE RESORT</div>
-        <h2 className="text-3xl md:text-5xl font-logo italic text-[#f5f5dc] leading-tight mb-10">
-          Atlantis / Issyk-Kul
-        </h2>
+<div className="px-10 md:px-20 py-14 max-w-6xl mx-auto">
 
-        <div className="grid md:grid-cols-3 gap-10">
-          <div className="md:col-span-1">
-            <div className="text-xs tracking-widest text-[#ffcc00] mb-3">ДНК ОБЪЕКТА</div>
-            <div className="text-xl md:text-2xl font-logo italic text-[#f5f5dc]">
-              Курортная свобода. Воздух и горизонт. Интерьер, который поддерживает отдых, не споря с природой.
-            </div>
-          </div>
+<div className="text-xs tracking-widest text-[#ffcc00] mb-4">
+LAKE RESORT
+</div>
 
-          <div className="md:col-span-2 grid md:grid-cols-2 gap-10">
-            <div>
-              <div className="text-xs tracking-widest text-[#ffcc00] mb-3">ЗАДАЧА</div>
-              <p className="text-sm md:text-base text-[#f5f5dc]/80 leading-relaxed">
-                Создать лёгкое, современное пространство для отдыха у воды: ощущение простора, чистоты линий и спокойствия.
-              </p>
-            </div>
-            <div>
-              <div className="text-xs tracking-widest text-[#ffcc00] mb-3">РЕШЕНИЕ</div>
-              <p className="text-sm md:text-base text-[#f5f5dc]/80 leading-relaxed">
-                Светлая база, естественные оттенки, акцент на видовые оси, лаконичная мебель и сценарный свет — чтобы дом “дышал” и выглядел дорого.
-              </p>
-            </div>
-          </div>
-        </div>
+<h2 className="text-4xl md:text-5xl font-logo italic text-[#f5f5dc] mb-10">
+Atlantis / Issyk-Kul
+</h2>
 
-        <div className="mt-12">
-          <div className="text-xs tracking-widest text-[#ffcc00] mb-4">ТАКТИЛЬНЫЙ КОД</div>
-          <div className="flex flex-wrap gap-3">
-            {["Светлый камень", "Дерево", "Стекло", "Лён"].map((t) => (
-              <span
-                key={t}
-                className="border border-[#ffcc00]/30 px-3 py-2 text-[#ffcc00] text-xs tracking-widest"
-              >
-                {t}
-              </span>
-            ))}
-          </div>
-        </div>
+<p className="text-[#f5f5dc]/80 leading-relaxed mb-10">
+Курортный архитектурный комплекс на берегу Иссык-Куля.
+Чистая геометрия, спокойная палитра
+и акцент на природном ландшафте.
+</p>
 
-        <div className="mt-14">
-          <div className="text-xs tracking-widest text-[#ffcc00] mb-6">ВИЗУАЛЬНОЕ ВОПЛОЩЕНИЕ</div>
+<a
+href="https://www.instagram.com/atlantis.kg"
+target="_blank"
+className="border border-[#ffcc00]/60 px-12 py-4 text-[#ffcc00] tracking-widest
+hover:bg-[#ffcc00]/10 transition"
+>
+Посмотреть в профиле Instagram
+</a>
 
-          <a
-            href="https://www.instagram.com/atlantis.kg?igsh=MWIzMG45aHZiaWpmNA%3D%3D"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center justify-center px-8 py-4 border border-[#ffcc00]/60 bg-[#ffcc00]/10 text-[#ffcc00] hover:bg-[#ffcc00]/20 transition rounded-xl"
-          >
-            Посмотреть в профиле Instagram
-          </a>
-        </div>
-
-        <div className="h-16" />
-      </div>
-    </div>
-  </div>
+</div>
+</div>
+</div>
 </dialog>
 
 {/* Evolution block: link to old sAnyaAD portfolio */}
