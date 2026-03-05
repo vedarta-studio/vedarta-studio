@@ -177,7 +177,38 @@ export const Documentation: React.FC = () => {
 ))}
               </div>
             </div>
+{/* Таблица комплектации (после разверток ванной) */}
+<div className="max-w-7xl mx-auto mb-32 animate-reveal">
+  <div className="p-10 border border-[#ffcc00]/20 bg-white/[0.02] backdrop-blur-md relative overflow-hidden">
+    <div className="relative z-10">
+      <div className="flex items-center gap-4 mb-4">
+        <svg className="w-8 h-8 text-[#ffcc00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5"
+            d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
 
+        <h4 className="text-2xl font-logo italic text-[#f5f5dc]">
+          Комплектация: плитка • сантехника • свет
+        </h4>
+      </div>
+
+      <p className="text-[#f5f5dc]/50 text-sm mb-10 italic max-w-3xl">
+        Единая таблица комплектации: позиции (фото), объемы, ссылки, стоимость — всё в одном месте.
+      </p>
+
+      <div className="flex justify-center">
+        <a
+          href="https://docs.google.com/spreadsheets/d/1EJzhD8pfBkTNvv7V51ibotArZLB5DL90/edit?usp=sharing&ouid=112943527846631831396&rtpof=true&sd=true"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-gold inline-flex items-center justify-center w-full max-w-[560px] px-10 py-5 rounded-sm text-[11px] font-black tracking-[0.4em] uppercase shadow-2xl transition-transform hover:scale-105"
+        >
+          ОТКРЫТЬ ТАБЛИЦУ →
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
             {/* 3D VIEWS SECTION */}
             <div className="max-w-7xl mx-auto space-y-12 mb-32">
               <div className="flex items-center gap-6 mb-16">
