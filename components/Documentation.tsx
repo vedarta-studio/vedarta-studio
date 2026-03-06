@@ -173,33 +173,41 @@ export const Documentation: React.FC = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
                 {projectDocumentation.technicalSheets.map((item: any, idx: number) => (
-  <SheetCard item={item} idx={idx} />
-))}
+                  <SheetCard item={item} idx={idx} />
+                ))}
               </div>
             </div>
-<div className="p-10 border border-[#ffcc00]/20 bg-white/[0.02] backdrop-blur-md relative group overflow-hidden">
-  <div className="relative z-10">
-    <div className="flex items-center gap-4 mb-4">
-      <svg className="w-8 h-8 text-[#ffcc00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-      </svg>
-      <h4 className="text-2xl font-logo italic text-[#f5f5dc]">Комплектация объекта</h4>
-    </div>
 
-    <p className="text-[#f5f5dc]/40 text-sm mb-8 italic">
-      Интерактивная таблица для формирования ведомостей, расчета материалов и управления закупками.
-    </p>
+            <div className="max-w-7xl mx-auto my-12">
+              <div className="p-10 border border-[#ffcc00]/20 bg-white/[0.02] backdrop-blur-md relative group overflow-hidden">
+                <div className="relative z-10">
+                  <div className="flex items-center gap-4 mb-4">
+                    <svg className="w-8 h-8 text-[#ffcc00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    <h4 className="text-2xl font-logo italic text-[#f5f5dc]">
+                      Комплектация объекта
+                    </h4>
+                  </div>
 
-    <a
-      href="https://drive.google.com/file/d/1kPo8W9VNGBG448kFn8AdamwPyalkWPMc/preview"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="btn-gold inline-block px-10 py-5 rounded-sm text-[11px] font-black tracking-[0.4em] uppercase shadow-2xl transition-transform hover:scale-105 relative z-[30]"
-    >
-      Открыть таблицу →
-    </a>
-  </div>
-</div>
+                  <p className="text-[#f5f5dc]/40 text-sm mb-8 italic">
+                    Единая таблица комплектации: позиции (фото), объемы, ссылки и стоимость — всё в одном месте.
+                    <br /><br />
+                    Документ используется для формирования ведомостей, расчёта материалов и управления закупками.
+                  </p>
+
+                  <a
+                    href="https://drive.google.com/file/d/1kPo8W9VNGBG448kFn8AdamwPyalkWPMc/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-gold inline-block px-10 py-5 rounded-sm text-[11px] font-black tracking-[0.4em] uppercase shadow-2xl transition-transform hover:scale-105 relative z-[30]"
+                  >
+                    ОТКРЫТЬ ТАБЛИЦУ →
+                  </a>
+                </div>
+              </div>
+            </div>
+
             {/* 3D VIEWS SECTION */}
             <div className="max-w-7xl mx-auto space-y-12 mb-32">
               <div className="flex items-center gap-6 mb-16">
