@@ -197,8 +197,7 @@ export const Documentation: React.FC = () => {
                   </p>
 
                   <a
-                    href="https://drive.google.com/file/d/1kPo8W9VNGBG448kFn8AdamwPyalkWPMc/view?usp=sharing"
-                    target="_blank"
+                    href="https://drive.google.com/file/d/1kPo8W9VNGBG448kFn8AdamwPyalkWPMc/preview"
                     rel="noopener noreferrer"
                     className="btn-gold inline-block px-10 py-5 rounded-sm text-[11px] font-black tracking-[0.4em] uppercase shadow-2xl transition-transform hover:scale-105 relative z-[30]"
                   >
