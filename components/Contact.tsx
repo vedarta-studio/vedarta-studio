@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { siteConfig } from '../siteConfig';
 
@@ -66,8 +65,8 @@ export const Contact: React.FC = () => {
       </div>
 
       {showSocialManifesto && (
-        <div className="fixed inset-0 z-[1000] flex items-center justify-center bg-[#041a16]/95 backdrop-blur-2xl p-6 animate-fade-in overflow-y-auto">
-          <div className="relative group max-w-4xl w-full bg-white/[0.02] border border-white/5 p-12 rounded-sm shadow-2xl">
+        <div className="fixed inset-0 z-[1000] flex items-start md:items-center justify-center bg-[#041a16]/95 backdrop-blur-2xl p-4 md:p-6 animate-fade-in overflow-y-auto">
+          <div className="relative group max-w-4xl w-full bg-white/[0.02] border border-white/5 p-6 md:p-12 rounded-sm shadow-2xl my-6 md:my-0">
             <div className="text-[#f5f5dc]/80 text-lg leading-relaxed italic font-serif space-y-2 pt-12">
               {siteConfig.socialManifesto.map((line, i) => (
                 <p key={i}>{line}</p>
