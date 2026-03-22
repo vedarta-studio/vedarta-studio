@@ -537,10 +537,10 @@ vedAna: {
 Это один из примеров,
 который получает заказчик вместе с изделием.`,
     items: [
-      {
-        title: "Фото на бархате",
-        image: "https://drive.google.com/thumbnail?id=17niw_H_dIKDKZTwFQjj6LJZPX4ffCJc4&sz=w1600"
-      },
+     {
+  title: "Фото на бархате",
+  image: "https://drive.google.com/thumbnail?id=1fyRySQVSQqTcY21CWbZMur83EeCi519o&sz=w1600"
+},
       {
         title: "Описание",
         image: "https://drive.google.com/thumbnail?id=1CjWbCOITSZ546aMDcen_SEirR0JTg4V1&sz=w1200"
