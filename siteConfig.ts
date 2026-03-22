@@ -472,10 +472,10 @@ export const siteConfig = {
     "Счастье — это безграничная свобода выбора действий!",
     "И вы всегда можете выбрать Жить Настоящую Жизнь!"
   ],
-    vedAna: {
-    intro: {
-      title: "Украшения VedAna",
-      text: `После создания пространств
+vedAna: {
+  intro: {
+    title: "Украшения VedAna",
+    text: `После создания пространств
 мне всегда хотелось идти глубже —
 туда, где начинается внутреннее ощущение человека.
 
@@ -500,24 +500,29 @@ export const siteConfig = {
 
 Это продолжение меня.
 И то, чем я делюсь.`
-    },
+  },
 
-    catalog: {
-      title: "Каталог украшений VedAna",
-      text: `Полная коллекция украшений,
+  catalog: {
+    title: "Каталог украшений VedAna",
+    text: `Полная коллекция украшений,
 описания камней и их смыслы,
 а также стоимость изделий.
 
 Вы можете спокойно изучить каталог
 и выбрать то, что откликнется именно вам.`,
-      viewLink: "https://drive.google.com/file/d/1-coFn19F4OUuN1dE7Ne1rNxUMcKVc0EU/view?usp=sharing",
-      downloadLink: "https://drive.google.com/file/d/1ymgRMzwW4t6m_dK7r0bFVfU7rKIK6cwz/view?usp=sharing",
-      coverImage: "https://drive.google.com/thumbnail?id=10EOmHCYVCn9ANAMz5Vtr20KcxVHUXsVe&sz=w1200"
-    },
 
-    guardian: {
-      title: "Хранительница Потока",
-      text: `Образ, который родился как отражение состояния.
+    // ⚡ БЫСТРЫЙ ПРОСМОТР
+    viewLink: "https://drive.google.com/file/d/1-coFn19F4OUuN1dE7Ne1rNxUMcKVc0EU/preview",
+
+    // ⚡ НОРМАЛЬНОЕ СКАЧИВАНИЕ
+    downloadLink: "https://drive.google.com/uc?export=download&id=1ymgRMzwW4t6m_dK7r0bFVfU7rKIK6cwz",
+
+    coverImage: "https://drive.google.com/thumbnail?id=10EOmHCYVCn9ANAMz5Vtr20KcxVHUXsVe&sz=w1200"
+  },
+
+  guardian: {
+    title: "Хранительница Потока",
+    text: `Образ, который родился как отражение состояния.
 
 Это не просто визуал —
 это ощущение движения,
@@ -526,35 +531,38 @@ export const siteConfig = {
 
 Она не плывёт по течению.
 Она его чувствует.`,
-      image: "https://drive.google.com/thumbnail?id=1Ns-_hXqFBvgh2dAnxGMazd1W6LkxXLBM&sz=w1200"
-    },
 
-    examples: {
-      title: "Примеры оформления",
-      text: `Каждое украшение сопровождается оформлением,
+    image: "https://drive.google.com/thumbnail?id=1Ns-_hXqFBvgh2dAnxGMazd1W6LkxXLBM&sz=w1200"
+  },
+
+  examples: {
+    title: "Примеры оформления",
+    text: `Каждое украшение сопровождается оформлением,
 в котором раскрывается его смысл.
 
 Это один из примеров,
 который получает заказчик вместе с изделием.`,
-      items: [
-        {
-          title: "Фото на бархате",
-          image: "https://drive.google.com/thumbnail?id=1rlYSvkxLGycd3OFlPpFiZrX7B3vNvFgn&sz=w1200"
-        },
-        {
-          title: "Описание",
-          image: "https://drive.google.com/thumbnail?id=1CjWbCOITSZ546aMDcen_SEirR0JTg4V1&sz=w1200"
-        },
-        {
-          title: "Художественное оформление",
-          image: "https://drive.google.com/thumbnail?id=1yR1BX1xtA-K-RiK6QBGS3xXHKXvvEX6O&sz=w1200"
-        }
-      ]
-    },
 
-    buttons: {
-      view: "Перейти в каталог",
-      download: "Скачать каталог"
-    }
+    items: [
+      {
+        title: "Фото на бархате",
+        // ⚡ ОБНОВЛЁННАЯ ССЫЛКА (без кеша)
+        image: "https://drive.google.com/thumbnail?id=1rlYSvkxLGycd3OFlPpFiZrX7B3vNvFgn&sz=w1600"
+      },
+      {
+        title: "Описание",
+        image: "https://drive.google.com/thumbnail?id=1CjWbCOITSZ546aMDcen_SEirR0JTg4V1&sz=w1200"
+      },
+      {
+        title: "Художественное оформление",
+        image: "https://drive.google.com/thumbnail?id=1yR1BX1xtA-K-RiK6QBGS3xXHKXvvEX6O&sz=w1200"
+      }
+    ]
+  },
+
+  buttons: {
+    view: "Перейти в каталог",
+    download: "Скачать каталог"
+  }
   }
 };
