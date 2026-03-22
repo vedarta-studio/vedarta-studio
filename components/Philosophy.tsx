@@ -4,7 +4,7 @@ import { siteConfig } from '../siteConfig';
 
 export const Philosophy: React.FC = () => {
   return (
-    <section id="philosophy" className="py-48 bg-[#041a16] flex items-center justify-center overflow-hidden relative border-y border-[#ffcc33]/10">
+    <section id="philosophy" className="py-48 bg-[#0e2a1f] flex items-center justify-center overflow-hidden relative border-y border-[#ffcc33]/10">
       <div className="absolute inset-0 flex items-center justify-center opacity-[0.04] pointer-events-none select-none">
         <span className="text-[25vw] font-logo font-black tracking-tighter text-[#fff7a0] whitespace-nowrap">VedArta</span>
       </div>

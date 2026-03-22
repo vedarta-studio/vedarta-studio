@@ -16,7 +16,7 @@ import { Testimonials } from './components/Testimonials';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { TextureLibrary } from './components/TextureLibrary';
-
+import { VedAnaBlock } from './components/VedAna';
 const App: React.FC = () => {
   const [showAI, setShowAI] = useState(false);
 
@@ -45,6 +45,7 @@ const handleOpenAI = () => {
         <Process />
         <Documentation />
         <Testimonials />
+        <VedAnaBlock />
         <Contact />
       </main>
 

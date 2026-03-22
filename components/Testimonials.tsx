@@ -4,7 +4,7 @@ import { siteConfig } from '../siteConfig';
 
 export const Testimonials: React.FC = () => {
   return (
-    <section className="py-32 bg-[#041a16] overflow-hidden relative">
+    <section className="py-32 bg-[#0e2a1f] overflow-hidden relative">
       <div className="absolute top-0 right-0 p-24 opacity-[0.03] pointer-events-none hidden lg:block">
         <span className="text-[250px] font-serif font-bold leading-none text-[#d4af37] select-none">VEDA</span>
       </div>

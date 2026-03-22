@@ -57,7 +57,7 @@ export const Services: React.FC = () => {
   };
 
   return (
-    <section id="services" className="py-24 bg-[#041a16]">
+    <section id="services" className="py-24 bg-[#0e2a1f]">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
           <div className="max-w-2xl">

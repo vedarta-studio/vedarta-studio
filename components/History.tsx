@@ -3,7 +3,7 @@ import React from 'react';
 
 export const History: React.FC = () => {
   return (
-    <section id="history" className="py-24 md:py-40 bg-[#041a16] relative overflow-hidden">
+    <section id="history" className="py-24 md:py-40 bg-[#0e2a1f] relative overflow-hidden">
       {/* Decorative vertical line */}
       <div className="absolute left-1/2 top-0 bottom-0 w-px bg-[#d4af37]/10 -translate-x-1/2 hidden md:block"></div>
       

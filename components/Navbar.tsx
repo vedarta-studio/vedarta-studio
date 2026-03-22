@@ -73,7 +73,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenAI }) => {
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ease-in-out border-b ${isScrolled || isMenuOpen ? 'bg-[#041a16] py-4 shadow-2xl border-[#ffcc00]/20' : 'bg-transparent py-8 md:py-10 border-transparent'}`}>
+      <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ease-in-out border-b ${isScrolled || isMenuOpen ? 'bg-[#0e2a1f] py-4 shadow-2xl border-[#ffcc00]/20' : 'bg-transparent py-8 md:py-10 border-transparent'}`}>
         <div className="mx-auto max-w-7xl px-6 flex items-center justify-between">
           
           <div className="flex items-center gap-8 lg:gap-14">
@@ -118,7 +118,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenAI }) => {
 
                        <button 
   onClick={onOpenAI}
-  className="relative overflow-hidden group text-[8px] tracking-[0.15em] font-bold px-4 py-2 rounded-full transition-all flex items-center gap-2 text-[#ffcc00] border border-[#ffcc00]/50 hover:border-[#ffcc00] hover:bg-[#ffcc00]/10 active:scale-95 bg-[#041a16]/50 backdrop-blur-sm"
+  className="relative overflow-hidden group text-[8px] tracking-[0.15em] font-bold px-4 py-2 rounded-full transition-all flex items-center gap-2 text-[#ffcc00] border border-[#ffcc00]/50 hover:border-[#ffcc00] hover:bg-[#ffcc00]/10 active:scale-95 bg-[#0e2a1f]/50 backdrop-blur-sm"
 >
   <div className="relative flex h-2 w-2">
     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#ffcc00] opacity-75"></span>
@@ -140,7 +140,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenAI }) => {
         </div>
       </nav>
 
-      <div className={`fixed inset-0 z-[90] bg-[#041a16] transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] ${isMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}`}>
+      <div className={`fixed inset-0 z-[90] bg-[#0e2a1f] transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] ${isMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}`}>
         <div className="h-full flex flex-col items-center justify-center space-y-10 overflow-y-auto relative z-10 px-6">
           {siteConfig.navigation.map((item, idx) => (
             <a 

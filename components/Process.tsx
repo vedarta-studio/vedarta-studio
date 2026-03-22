@@ -26,7 +26,7 @@ const steps = [
 
 export const Process: React.FC = () => {
   return (
-    <section className="py-24 bg-[#041a16] border-y border-[#d4af37]/10">
+    <section className="py-24 bg-[#0e2a1f] border-y border-[#d4af37]/10">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {steps.map((s, idx) => (

@@ -3,14 +3,14 @@ import { siteConfig } from "../siteConfig";
 
 export const VedAnaBlock: React.FC = () => {
   const [activeImage, setActiveImage] = useState<string | null>(null);
-  const { vedAna } = siteConfig;
+  const vedAna = siteConfig.vedAna;
 
   if (!vedAna) return null;
 
   return (
     <section className="relative py-24 md:py-32 border-t border-[#ffcc00]/10">
       <div className="container mx-auto px-6">
-        {/* Intro */}
+        {/* Вступление */}
         <div className="text-center mb-16 md:mb-24">
           <span className="text-[#ffcc00] text-[10px] md:text-[12px] font-black tracking-[0.6em] uppercase mb-4 block">
             VedAna
@@ -27,7 +27,7 @@ export const VedAnaBlock: React.FC = () => {
           </p>
         </div>
 
-        {/* Catalog */}
+        {/* Каталог */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 items-center mb-20 md:mb-28">
           <div className="order-2 lg:order-1">
             <span className="text-[#ffcc00] text-[10px] font-black tracking-[0.45em] uppercase mb-4 block">
@@ -68,7 +68,7 @@ export const VedAnaBlock: React.FC = () => {
               className="group overflow-hidden bg-black/20 p-2 border border-[#ffcc00]/20 hover:border-[#ffcc00] transition-all duration-700 cursor-pointer"
               onClick={() => setActiveImage(vedAna.catalog.coverImage)}
             >
-              <div className="relative overflow-hidden bg-black">
+              <div className="relative overflow-hidden bg-black/20">
                 <img
                   src={vedAna.catalog.coverImage}
                   alt={vedAna.catalog.title}
@@ -79,7 +79,7 @@ export const VedAnaBlock: React.FC = () => {
           </div>
         </div>
 
-        {/* Guardian */}
+        {/* Хранительница */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 items-center mb-20 md:mb-28">
           <div>
             <span className="text-[#ffcc00] text-[10px] font-black tracking-[0.45em] uppercase mb-4 block">
@@ -100,7 +100,7 @@ export const VedAnaBlock: React.FC = () => {
               className="group overflow-hidden bg-black/20 p-2 border border-[#ffcc00]/20 hover:border-[#ffcc00] transition-all duration-700 cursor-pointer"
               onClick={() => setActiveImage(vedAna.guardian.image)}
             >
-              <div className="relative overflow-hidden bg-black">
+              <div className="relative overflow-hidden bg-black/20">
                 <img
                   src={vedAna.guardian.image}
                   alt={vedAna.guardian.title}
@@ -111,7 +111,7 @@ export const VedAnaBlock: React.FC = () => {
           </div>
         </div>
 
-        {/* Examples */}
+        {/* Примеры оформления */}
         <div className="text-center mb-12 md:mb-16">
           <span className="text-[#ffcc00] text-[10px] font-black tracking-[0.45em] uppercase mb-4 block">
             Оформление
@@ -133,7 +133,7 @@ export const VedAnaBlock: React.FC = () => {
               className="group overflow-hidden bg-black/20 p-2 border border-[#ffcc00]/20 hover:border-[#ffcc00] transition-all duration-700 cursor-pointer"
               onClick={() => setActiveImage(item.image)}
             >
-              <div className="relative overflow-hidden bg-black">
+              <div className="relative overflow-hidden bg-black/20">
                 <img
                   src={item.image}
                   alt={item.title}
@@ -154,13 +154,14 @@ export const VedAnaBlock: React.FC = () => {
         </div>
       </div>
 
-      {/* Fullscreen image */}
+      {/* Полный экран */}
       {activeImage && (
         <div
           className="fixed inset-0 z-[999] bg-black/95 flex items-center justify-center p-4 md:p-8"
           onClick={() => setActiveImage(null)}
         >
           <button
+            type="button"
             className="absolute top-6 right-6 text-[#f5f5dc] text-4xl leading-none"
             onClick={() => setActiveImage(null)}
             aria-label="Закрыть"

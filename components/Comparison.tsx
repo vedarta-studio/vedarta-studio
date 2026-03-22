@@ -302,7 +302,7 @@ export const Comparison: React.FC = () => {
   };
 
   return (
-    <section id="transformation" className="pt-24 pb-12 md:pt-32 md:pb-20 bg-[#041a16] relative overflow-hidden">
+    <section id="transformation" className="pt-24 pb-12 md:pt-32 md:pb-20 bg-[#0e2a1f] relative overflow-hidden">
       <div className="container mx-auto px-6 mb-16 md:mb-20">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start lg:items-end">
           <div className="lg:w-1/2">
@@ -355,7 +355,7 @@ export const Comparison: React.FC = () => {
                     <button
                       key={idx}
                       onClick={() => changeStyle(idx)}
-                      className={`block w-full text-left px-5 py-4 md:px-8 md:py-5 transition-all border text-[10px] font-black uppercase tracking-widest ${styleIdx === idx ? 'bg-[#ffcc00] text-[#041a16] border-[#ffcc00] shadow-lg' : 'border-white/10 text-white/40 hover:border-white/20'}`}
+                      className={`block w-full text-left px-5 py-4 md:px-8 md:py-5 transition-all border text-[10px] font-black uppercase tracking-widest ${styleIdx === idx ? 'bg-[#ffcc00] text-[#0e2a1f] border-[#ffcc00] shadow-lg' : 'border-white/10 text-white/40 hover:border-white/20'}`}
                     >
                       {style.name}
                     </button>
@@ -392,7 +392,7 @@ export const Comparison: React.FC = () => {
                     className="absolute inset-y-0 z-20 w-[1px] bg-[#ffcc00] flex items-center justify-center shadow-[0_0_20px_#ffcc00] pointer-events-none" 
                     style={{ left: `${sliderPos}%` }}
                   >
-                    <div className="w-12 h-12 md:w-16 md:h-16 rounded-full border border-[#ffcc00]/50 bg-[#041a16]/95 text-[#ffcc00] flex items-center justify-center shadow-2xl -ml-[0.5px] backdrop-blur-md">
+                    <div className="w-12 h-12 md:w-16 md:h-16 rounded-full border border-[#ffcc00]/50 bg-[#0e2a1f]/95 text-[#ffcc00] flex items-center justify-center shadow-2xl -ml-[0.5px] backdrop-blur-md">
                        <div className="flex gap-1">
                           <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>

@@ -104,7 +104,7 @@ export const AIAssistant: React.FC<AIAssistantProps> = ({ onClose }) => {
 
   return (
     <div className="fixed inset-0 z-[200] flex items-center justify-center bg-black/95 backdrop-blur-2xl p-4 md:p-10 animate-fade-in">
-      <div className="w-full max-w-5xl h-[85vh] bg-[#041a16] border border-[#d4af37]/30 flex flex-col relative shadow-[0_0_100px_rgba(0,0,0,0.8)] rounded-sm overflow-hidden">
+      <div className="w-full max-w-5xl h-[85vh] bg-[#0e2a1f] border border-[#d4af37]/30 flex flex-col relative shadow-[0_0_100px_rgba(0,0,0,0.8)] rounded-sm overflow-hidden">
         
         {/* Header */}
         <div className="p-6 border-b border-[#d4af37]/20 flex items-center justify-between bg-[#062c26]">

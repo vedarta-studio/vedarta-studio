@@ -65,7 +65,7 @@ export const Documentation: React.FC = () => {
 
   return (
     <>
-      <section id="documentation" className="py-24 md:py-32 bg-[#041a16] relative overflow-hidden border-t border-white/5">
+      <section id="documentation" className="py-24 md:py-32 bg-[#0e2a1f] relative overflow-hidden border-t border-white/5">
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none" 
           style={{ 
             backgroundImage: 'linear-gradient(#ffcc00 0.5px, transparent 0.5px), linear-gradient(90deg, #ffcc00 0.5px, transparent 0.5px)', 
@@ -105,9 +105,9 @@ export const Documentation: React.FC = () => {
 
       {/* FULL HUB MODAL */}
       {showFullHub && (
-        <div className="fixed inset-0 z-[10000] bg-[#041a16] animate-fade-in flex flex-col overflow-hidden">
+        <div className="fixed inset-0 z-[10000] bg-[#0e2a1f] animate-fade-in flex flex-col overflow-hidden">
           {/* Header */}
-          <div className="p-6 md:p-10 border-b border-white/10 flex items-center justify-between bg-[#041a16] relative z-[10020] shadow-2xl">
+          <div className="p-6 md:p-10 border-b border-white/10 flex items-center justify-between bg-[#0e2a1f] relative z-[10020] shadow-2xl">
             <div className="flex items-center gap-6">
               <div className="w-12 h-12 rounded-full border border-[#ffcc00]/40 flex items-center justify-center bg-black/20 text-[#ffcc00]">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -121,7 +121,7 @@ export const Documentation: React.FC = () => {
             </div>
             <button 
               onClick={(e) => { e.stopPropagation(); setShowFullHub(false); }}
-              className="w-14 h-14 bg-white/5 border border-white/10 text-white rounded-full flex items-center justify-center hover:bg-[#ffcc00] hover:text-[#041a16] transition-all relative z-[10030]"
+              className="w-14 h-14 bg-white/5 border border-white/10 text-white rounded-full flex items-center justify-center hover:bg-[#ffcc00] hover:text-[#0e2a1f] transition-all relative z-[10030]"
               aria-label="Закрыть"
             >
               <span className="text-4xl font-light leading-none pointer-events-none">&times;</span>

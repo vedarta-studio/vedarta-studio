@@ -47,7 +47,7 @@ export const Portfolio: React.FC = () => {
   return (
     <section 
       id="portfolio" 
-      className={`pt-40 pb-24 md:pt-64 md:pb-32 bg-[#041a16] relative overflow-hidden transition-all duration-300 ${selectedProjectId ? 'z-[9999]' : 'z-10'}`}
+      className={`pt-40 pb-24 md:pt-64 md:pb-32 bg-[#0e2a1f] relative overflow-hidden transition-all duration-300 ${selectedProjectId ? 'z-[9999]' : 'z-10'}`}
     >
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-[0.01] flex items-center justify-center select-none">
         <span className="text-[20vw] font-logo font-black tracking-tighter text-[#ffcc00] whitespace-nowrap">VEDARTA</span>
@@ -78,7 +78,7 @@ export const Portfolio: React.FC = () => {
                   alt={p.title} 
                   className="w-full h-full object-cover transition-all duration-1000 transform group-hover:scale-105"
                 />
-                <div className="absolute inset-x-0 bottom-0 bg-[#041a16]/90 p-8 md:p-10 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                <div className="absolute inset-x-0 bottom-0 bg-[#0e2a1f]/90 p-8 md:p-10 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
                   <span className="text-[#ffcc00] text-[9px] tracking-[0.4em] font-black mb-3 uppercase">{p.category}</span>
                   <h3 className="text-xl md:text-2xl font-logo italic text-white tracking-tight leading-tight mb-4">{p.title}</h3>
                   <div className="flex items-center gap-3">
@@ -500,18 +500,18 @@ export const Portfolio: React.FC = () => {
         </div>
         {selectedProject && (
           <div 
-            className="fixed inset-0 z-[10000] bg-[#041a16] flex items-center justify-center animate-fade-in overflow-hidden"
+            className="fixed inset-0 z-[10000] bg-[#0e2a1f] flex items-center justify-center animate-fade-in overflow-hidden"
             onClick={() => setSelectedProjectId(null)}
           >
             <div 
               ref={modalContainerRef}
-              className="relative w-full h-full flex flex-col items-center bg-[#041a16] p-4 md:p-10 lg:p-20 overflow-y-auto custom-scrollbar relative z-[10010]" 
+              className="relative w-full h-full flex flex-col items-center bg-[#0e2a1f] p-4 md:p-10 lg:p-20 overflow-y-auto custom-scrollbar relative z-[10010]" 
               onClick={e => e.stopPropagation()}
             >
               <div className="sticky top-0 self-end z-[10020] flex items-center gap-4 mb-10">
                 <button 
                   onClick={toggleModalFullscreen}
-                  className="w-12 h-12 bg-black/60 border border-[#ffcc00]/40 text-[#ffcc00] rounded-full flex items-center justify-center hover:bg-[#ffcc00] hover:text-[#041a16] transition-all"
+                  className="w-12 h-12 bg-black/60 border border-[#ffcc00]/40 text-[#ffcc00] rounded-full flex items-center justify-center hover:bg-[#ffcc00] hover:text-[#0e2a1f] transition-all"
                 >
                   {isModalFs ? (
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 9L4 4m0 0l5 0m-5 0l0 5m11 0l5-5m0 0l-5 0m5 0l0 5m-5 11l5 5m0 0l-5 0m5 0l0-5m-11 0l-5 5m0 0l5 0m-5 0l0-5" /></svg>
@@ -521,7 +521,7 @@ export const Portfolio: React.FC = () => {
                 </button>
                 <button 
                   onClick={() => setSelectedProjectId(null)}
-                  className="w-12 h-12 bg-black/60 border border-[#ffcc00]/40 text-[#ffcc00] rounded-full flex items-center justify-center hover:bg-[#ffcc00] hover:text-[#041a16] transition-all"
+                  className="w-12 h-12 bg-black/60 border border-[#ffcc00]/40 text-[#ffcc00] rounded-full flex items-center justify-center hover:bg-[#ffcc00] hover:text-[#0e2a1f] transition-all"
                 >
                   <span className="text-4xl font-light leading-none">&times;</span>
                 </button>

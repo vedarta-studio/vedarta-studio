@@ -18,7 +18,7 @@ export const CallToAction: React.FC = () => {
   };
 
   return (
-    <section className="pb-24 pt-4 md:pb-32 md:pt-8 bg-[#041a16] flex justify-center items-center">
+    <section className="pb-24 pt-4 md:pb-32 md:pt-8 bg-[#0e2a1f] flex justify-center items-center">
       <div className="container mx-auto px-6 text-center">
         <div className="max-w-3xl mx-auto">
           <div className="flex flex-col items-center">

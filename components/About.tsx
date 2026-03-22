@@ -21,7 +21,7 @@ export const About: React.FC = () => {
   const { fullManifesto } = siteConfig;
 
   return (
-    <section id="about" className="py-24 bg-[#041a16] relative scroll-mt-24">
+    <section id="about" className="py-24 bg-[#0e2a1f] relative scroll-mt-24">
       <div className="container mx-auto px-6">
         <div className="text-center mb-20 md:mb-24">
           <span className="text-[#d4af37] text-[10px] font-black tracking-[0.5em] uppercase mb-4 block">О Студии</span>
@@ -35,7 +35,7 @@ export const About: React.FC = () => {
                 <div className="relative overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.8)] bg-[#062c26] rounded-sm">
                   <img src={siteConfig.founder.photo} alt={siteConfig.founder.name} className="w-full h-auto" />
                 </div>
-                <div className="absolute -bottom-6 -right-6 bg-[#d4af37] p-6 text-[#041a16] font-serif italic text-xl shadow-2xl z-10">
+                <div className="absolute -bottom-6 -right-6 bg-[#d4af37] p-6 text-[#0e2a1f] font-serif italic text-xl shadow-2xl z-10">
                   VedArta
                 </div>
               </div>
@@ -63,7 +63,7 @@ export const About: React.FC = () => {
                   style={{ width: `calc(100% / ${tabs.length} - 12px)`, left: `calc((${activeTab === 'story' ? 0 : activeTab === 'experience' ? 1 : 2} * 100% / ${tabs.length}) + 6px)` }}
                 ></div>
                 {tabs.map(tab => (
-                  <button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`relative z-10 flex-1 py-4 text-[12px] font-black uppercase tracking-[0.3em] transition-all ${activeTab === tab.id ? 'text-[#041a16]' : 'text-[#f5f5dc]/50'}`}>
+                  <button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`relative z-10 flex-1 py-4 text-[12px] font-black uppercase tracking-[0.3em] transition-all ${activeTab === tab.id ? 'text-[#0e2a1f]' : 'text-[#f5f5dc]/50'}`}>
                     {tab.label}
                   </button>
                 ))}
@@ -111,7 +111,7 @@ export const About: React.FC = () => {
       </div>
 
       {showFullManifesto && (
-        <div className="fixed inset-0 z-[1000] flex items-center justify-center bg-[#041a16]/98 backdrop-blur-3xl p-2 md:p-10 animate-fade-in overflow-hidden">
+        <div className="fixed inset-0 z-[1000] flex items-center justify-center bg-[#0e2a1f]/98 backdrop-blur-3xl p-2 md:p-10 animate-fade-in overflow-hidden">
           <div className="w-full max-w-6xl h-full md:h-[90vh] bg-[#062c26] border border-[#d4af37]/30 flex flex-col relative overflow-hidden rounded-sm shadow-[0_0_100px_rgba(0,0,0,0.8)]">
             <div className="p-4 md:p-8 border-b border-[#d4af37]/10 flex items-center justify-between bg-[#062c26] relative z-20 shadow-md">
               <div className="flex items-center gap-3 md:gap-6">
@@ -163,7 +163,7 @@ export const About: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="md:col-span-5 bg-[#041a16] p-6 md:p-8 border border-[#d4af37]/20 space-y-4 md:space-y-6 shadow-inner">
+                  <div className="md:col-span-5 bg-[#0e2a1f] p-6 md:p-8 border border-[#d4af37]/20 space-y-4 md:space-y-6 shadow-inner">
                     <p className="text-base md:text-lg italic leading-relaxed text-white/60">
                       {fullManifesto.experience.atlantis.split('Она простая')[0]}
                     </p>
@@ -224,7 +224,7 @@ export const About: React.FC = () => {
                   </div>
 
                   <div className="relative group w-full max-w-3xl mx-auto px-2 sm:px-4 md:px-0">
-                    <div className="bg-[#041a16] border-2 border-[#d4af37]/40 p-8 md:p-16 rounded-sm shadow-[0_0_60px_rgba(0,0,0,0.6)] relative z-10 overflow-hidden">
+                    <div className="bg-[#0e2a1f] border-2 border-[#d4af37]/40 p-8 md:p-16 rounded-sm shadow-[0_0_60px_rgba(0,0,0,0.6)] relative z-10 overflow-hidden">
                       <div className="absolute top-4 left-4 text-[8px] md:text-[10px] text-[#d4af37]/40 uppercase tracking-[0.3em] font-black">VEDARTA CORE PRINCIPLE</div>
                       <h3 className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-logo italic font-bold text-[#d4af37] tracking-tight leading-tight uppercase whitespace-normal break-words">
                         {fullManifesto.philosophy.formula}

@@ -9,7 +9,7 @@ export const Contact: React.FC = () => {
   }, [showSocialManifesto]);
 
   return (
-    <section id="contact" className="py-24 bg-[#041a16] relative">
+    <section id="contact" className="py-24 bg-[#0e2a1f] relative">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
 
@@ -94,9 +94,9 @@ export const Contact: React.FC = () => {
                 className="w-full bg-transparent border-b border-[#d4af37]/40 py-4 focus:border-[#fcf6ba] outline-none text-[#f5f5dc] text-lg" />
 
               <select className="w-full bg-transparent border-b border-[#d4af37]/40 py-4 focus:border-[#fcf6ba] outline-none text-[#f5f5dc]/40 text-lg">
-                <option value="" className="bg-[#041a16]">Услуга</option>
-                <option value="interior" className="bg-[#041a16]">Дизайн</option>
-                <option value="arch" className="bg-[#041a16]">Архитектура</option>
+                <option value="" className="bg-[#0e2a1f]">Услуга</option>
+                <option value="interior" className="bg-[#0e2a1f]">Дизайн</option>
+                <option value="arch" className="bg-[#0e2a1f]">Архитектура</option>
               </select>
 
               <button className="w-full btn-gold py-7 rounded-sm text-[13px] font-black tracking-widest uppercase">
@@ -110,7 +110,7 @@ export const Contact: React.FC = () => {
 
 
       {showSocialManifesto && (
-        <div className="fixed inset-0 z-[1000] bg-[#041a16]/95 backdrop-blur-2xl overflow-y-auto animate-fade-in">
+        <div className="fixed inset-0 z-[1000] bg-[#0e2a1f]/95 backdrop-blur-2xl overflow-y-auto animate-fade-in">
 
           <div className="min-h-screen flex items-start justify-center p-4 md:items-center md:p-6">
 
