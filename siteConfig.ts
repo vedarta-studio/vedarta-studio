@@ -153,7 +153,7 @@ export const siteConfig = {
     description: "Проект VedArta — это детальная инструкция для строителей, где просчитан каждый миллиметр, каждый кабель и каждый стык материалов.",
     excelLink: "https://docs.google.com/spreadsheets/d/1E6MC8B22yNdiwJvigYZEJ_o9-bZTprqo8ZMUT9yHShM/edit?usp=sharing",
     technicalSheets: [
-      { title: "Обмерочный план", preview: "https://drive.google.com/thumbnail?id=1vlo3PHB9y06eQDV79yHcit8QpHxC9pMV&sz=w1200", desc: "Точная фиксация геометрии." },
+      { title: "Обмерный план", preview: "https://drive.google.com/thumbnail?id=1vlo3PHB9y06eQDV79yHcit8QpHxC9pMV&sz=w1200", desc: "Точная фиксация геометрии." },
       { title: "План монтажа перегородок", preview: "https://drive.google.com/thumbnail?id=19rwQ5dOFlv8kot86EYTUXIZR4Fu72XM5&sz=w1200", desc: "Конструктивное решение стен." },
       { title: "План потолочной конструкции", preview: "https://drive.google.com/thumbnail?id=1Vgox9rCfFUoOTmMHLOmtWBrFRZEQx4_B&sz=w1200", desc: "Уровни потолков и свет." },
       { title: "План напольных покрытий", preview: "https://drive.google.com/thumbnail?id=1Ms7gf9Kdu1LESujKT8-uBgcsOtiX8meP&sz=w1200", desc: "Типы покрытий и стыки." },
@@ -168,6 +168,7 @@ export const siteConfig = {
       { title: "Ванная — стена C", preview: "https://drive.google.com/thumbnail?id=1cIu7J948_eEFncH0rrwJy7gwg42CcN_M&sz=w1200", desc: "Дверь, полотенцесушитель и привязка розеток." },
       { title: "Ванная — стена D", preview: "https://drive.google.com/thumbnail?id=1rTb8Si9X_ghaIDX1qLKsgFFL0LxiZNKp&sz=w1200", desc: "Ванна, смесители и раскладка плитки." }
     ],
+    
     view3D: [
       { title: "3D Планировка Лист 1", preview: "https://drive.google.com/thumbnail?id=1ydf18bZjloE_XVkAThxY2yf-BW-BBeq7&sz=w1200" },
       { title: "3D Планировка Лист 2", preview: "https://drive.google.com/thumbnail?id=1iCK97MvwSpKRJAQwuiMjDxXi6K77cE3T&sz=w1200" },
