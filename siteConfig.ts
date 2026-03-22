@@ -510,13 +510,8 @@ vedAna: {
 
 Вы можете спокойно изучить каталог
 и выбрать то, что откликнется именно вам.`,
-
-    // ⚡ БЫСТРЫЙ ПРОСМОТР
-    viewLink: "https://drive.google.com/file/d/1-coFn19F4OUuN1dE7Ne1rNxUMcKVc0EU/preview",
-
-    // ⚡ НОРМАЛЬНОЕ СКАЧИВАНИЕ
+    viewLink: "https://drive.google.com/file/d/1ymgRMzwW4t6m_dK7r0bFVfU7rKIK6cwz/preview",
     downloadLink: "https://drive.google.com/uc?export=download&id=1ymgRMzwW4t6m_dK7r0bFVfU7rKIK6cwz",
-
     coverImage: "https://drive.google.com/thumbnail?id=10EOmHCYVCn9ANAMz5Vtr20KcxVHUXsVe&sz=w1200"
   },
 
@@ -531,7 +526,6 @@ vedAna: {
 
 Она не плывёт по течению.
 Она его чувствует.`,
-
     image: "https://drive.google.com/thumbnail?id=1Ns-_hXqFBvgh2dAnxGMazd1W6LkxXLBM&sz=w1200"
   },
 
@@ -542,12 +536,10 @@ vedAna: {
 
 Это один из примеров,
 который получает заказчик вместе с изделием.`,
-
     items: [
       {
         title: "Фото на бархате",
-        // ⚡ ОБНОВЛЁННАЯ ССЫЛКА (без кеша)
-        image: "https://drive.google.com/thumbnail?id=1rlYSvkxLGycd3OFlPpFiZrX7B3vNvFgn&sz=w1600"
+        image: "https://drive.google.com/thumbnail?id=17niw_H_dIKDKZTwFQjj6LJZPX4ffCJc4&sz=w1600"
       },
       {
         title: "Описание",
@@ -564,5 +556,5 @@ vedAna: {
     view: "Перейти в каталог",
     download: "Скачать каталог"
   }
-  }
+}
 };
