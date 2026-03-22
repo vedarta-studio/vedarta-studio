@@ -10,6 +10,7 @@ export const VedAnaBlock: React.FC = () => {
   return (
     <section className="relative py-24 md:py-32 border-t border-[#ffcc00]/10">
       <div className="container mx-auto px-6">
+
         {/* INTRO */}
         <div className="text-center mb-20 md:mb-24">
           <span className="text-[#ffcc00] text-[10px] md:text-[12px] font-black tracking-[0.6em] uppercase block mb-4">
@@ -20,14 +21,20 @@ export const VedAnaBlock: React.FC = () => {
             {vedAna.intro.title}
           </h2>
 
-          <p className="text-[#f5f5dc]/80 max-w-5xl mx-auto text-base md:text-xl font-light leading-relaxed whitespace-pre-line">
-            {vedAna.intro.text}
-          </p>
+          <div className="max-w-5xl mx-auto text-[#f5f5dc]/80 text-base md:text-xl leading-relaxed">
+            {vedAna.intro.text
+              .split("\n\n")
+              .map((paragraph, index) => (
+                <p key={index} className="mb-5 last:mb-0">
+                  {paragraph.replace(/\n/g, " ")}
+                </p>
+              ))}
+          </div>
         </div>
 
         {/* CATALOG */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center mb-24 md:mb-32">
-          {/* TEXT */}
+
           <div>
             <h3 className="text-[#f5f5dc] text-3xl md:text-5xl font-light italic mb-6">
               {vedAna.catalog.title}
@@ -58,7 +65,6 @@ export const VedAnaBlock: React.FC = () => {
             </div>
           </div>
 
-          {/* IMAGE */}
           <div className="flex justify-center lg:justify-end">
             <div
               className="group cursor-pointer overflow-hidden"
@@ -75,7 +81,7 @@ export const VedAnaBlock: React.FC = () => {
 
         {/* GUARDIAN */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center mb-24 md:mb-32">
-          {/* IMAGE */}
+
           <div className="flex justify-center">
             <div
               className="group cursor-pointer overflow-hidden"
@@ -89,7 +95,6 @@ export const VedAnaBlock: React.FC = () => {
             </div>
           </div>
 
-          {/* TEXT */}
           <div>
             <h3 className="text-[#f5f5dc] text-3xl md:text-5xl font-light italic mb-6">
               {vedAna.guardian.title}
@@ -130,6 +135,7 @@ export const VedAnaBlock: React.FC = () => {
             ))}
           </div>
         </div>
+
       </div>
 
       {/* FULLSCREEN */}
