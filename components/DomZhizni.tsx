@@ -35,7 +35,7 @@ export const DomZhizni: React.FC = () => {
 
   return (
     <>
-      <section className="bg-[#041a16] py-24 border-t border-[#fff7a0]/10">
+      <section className="bg-[#0e2a1f] py-24 border-t border-[#fff7a0]/10">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="mb-16 text-center">
@@ -43,11 +43,11 @@ export const DomZhizni: React.FC = () => {
                 {houseOfLife.title}
               </h2>
 
-              <div className="max-w-3xl mx-auto text-[#f5f5dc] text-[17px] md:text-[19px] leading-[1.95] whitespace-pre-line">
+              <div className="max-w-3xl mx-auto text-[#f5f5dc] text-[16px] md:text-[18px] leading-[1.6] whitespace-pre-line">
                 {houseOfLife.intro}
               </div>
 
-              <div className="max-w-3xl mx-auto mt-10 text-[#f5f5dc]/90 text-[16px] md:text-[18px] leading-[1.9] whitespace-pre-line">
+              <div className="max-w-3xl mx-auto mt-8 text-[#f5f5dc]/90 text-[15px] md:text-[17px] leading-[1.6] whitespace-pre-line">
                 {houseOfLife.essence}
               </div>
             </div>
@@ -64,7 +64,7 @@ export const DomZhizni: React.FC = () => {
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="w-full aspect-[16/9] object-cover transition-transform duration-500 group-hover:scale-[1.01]"
+                      className="w-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-[1.01]"
                     />
 
                     <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -117,7 +117,7 @@ export const DomZhizni: React.FC = () => {
                         return (
                           <h4
                             key={index}
-                            className="mt-10 mb-6 text-[21px] md:text-[24px] leading-[1.45] font-semibold text-[#f5f5dc]"
+                            className="mt-8 mb-4 text-[21px] md:text-[24px] leading-[1.35] font-semibold text-[#f5f5dc]"
                           >
                             {block.text}
                           </h4>
@@ -128,7 +128,7 @@ export const DomZhizni: React.FC = () => {
                         return (
                           <h5
                             key={index}
-                            className="mt-8 mb-4 text-[18px] md:text-[20px] leading-[1.45] font-semibold text-[#f5f5dc]"
+                            className="mt-6 mb-3 text-[18px] md:text-[20px] leading-[1.35] font-semibold text-[#f5f5dc]"
                           >
                             {block.text}
                           </h5>
@@ -139,7 +139,7 @@ export const DomZhizni: React.FC = () => {
                         return (
                           <p
                             key={index}
-                            className="mb-5 text-[16px] md:text-[18px] leading-[1.95] text-[#f5f5dc]/95"
+                            className="mb-4 text-[16px] md:text-[18px] leading-[1.55] text-[#f5f5dc]/95"
                           >
                             {renderInlineMarkdown(block.text)}
                           </p>
@@ -148,11 +148,11 @@ export const DomZhizni: React.FC = () => {
 
                       if (block.type === 'list') {
                         return (
-                          <ul key={index} className="mb-6 pl-0 space-y-3">
+                          <ul key={index} className="mb-5 pl-0 space-y-2">
                             {block.items.map((item, itemIndex) => (
                               <li
                                 key={itemIndex}
-                                className="text-[16px] md:text-[18px] leading-[1.9] text-[#f5f5dc]/95"
+                                className="text-[16px] md:text-[18px] leading-[1.55] text-[#f5f5dc]/95"
                               >
                                 {renderInlineMarkdown(item)}
                               </li>
@@ -165,8 +165,8 @@ export const DomZhizni: React.FC = () => {
                     })}
                   </div>
 
-                  <div className="mt-14">
-                    <div className="text-[#f5f5dc] text-[18px] md:text-[20px] leading-[1.8] mb-2">
+                  <div className="mt-12">
+                    <div className="text-[#f5f5dc] text-[18px] md:text-[20px] leading-[1.5] mb-2">
                       {houseOfLife.signature.name}
                     </div>
 
@@ -179,11 +179,11 @@ export const DomZhizni: React.FC = () => {
             </div>
 
             <div className="text-center max-w-3xl mx-auto">
-              <div className="text-[#f5f5dc] text-[18px] md:text-[21px] leading-[1.9] whitespace-pre-line mb-8">
+              <div className="text-[#f5f5dc] text-[18px] md:text-[21px] leading-[1.6] whitespace-pre-line mb-8">
                 {houseOfLife.finalText}
               </div>
 
-              <div className="text-[#f5f5dc]/85 text-[16px] md:text-[18px] leading-[1.8] mb-2">
+              <div className="text-[#f5f5dc]/85 text-[16px] md:text-[18px] leading-[1.5] mb-2">
                 {houseOfLife.telegramText}
               </div>
 
@@ -206,11 +206,11 @@ export const DomZhizni: React.FC = () => {
 
       {activeVideo && (
         <div
-          className="fixed inset-0 z-[100] bg-black/80 flex items-center justify-center px-4"
+          className="fixed inset-0 z-[100] bg-black/80 flex items-center justify-center px-4 py-4"
           onClick={() => setActiveVideo(null)}
         >
           <div
-            className="relative w-full max-w-5xl bg-[#041a16] border border-[#fff7a0]/20"
+            className="relative w-full max-w-[1100px] h-[85vh] bg-[#0e2a1f] border border-[#fff7a0]/20"
             onClick={(e) => e.stopPropagation()}
           >
             <button
@@ -222,14 +222,13 @@ export const DomZhizni: React.FC = () => {
               ✕
             </button>
 
-            <div className="aspect-video w-full">
-              <iframe
-                src={activeVideo}
-                title="Видео презентации"
-                className="w-full h-full"
-                allow="autoplay; fullscreen"
-              />
-            </div>
+            <iframe
+              src={activeVideo}
+              title="Видео презентации"
+              className="w-full h-full"
+              allow="autoplay; fullscreen"
+              allowFullScreen
+            />
           </div>
         </div>
       )}
