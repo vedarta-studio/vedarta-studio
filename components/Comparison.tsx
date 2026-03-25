@@ -318,7 +318,7 @@ export const Comparison: React.FC = () => {
               </p>
               <div className="space-y-3">
                 <p className="text-[10px] text-[#ffcc00] font-black uppercase tracking-[0.3em]">Навигация по объекту:</p>
-                <ul className="text-[13px] text-[#f5f5dc]/50 space-y-2 font-medium tracking-wide">
+                <ul className="text-[16px] md:text-[17px] text-[#f5f5dc]/50 space-y-2 font-medium tracking-wide">
                   <li className="flex items-center gap-3"><span className="w-1.5 h-1.5 bg-[#ffcc00] rounded-full shadow-[0_0_8px_#ffcc00]"></span> Слева: Выбор точки обзора объекта</li>
                   <li className="flex items-center gap-3"><span className="w-1.5 h-1.5 bg-[#ffcc00] rounded-full shadow-[0_0_8px_#ffcc00]"></span> В центре: Смена концептуальной палитры</li>
                   <li className="flex items-center gap-3"><span className="w-1.5 h-1.5 bg-[#ffcc00] rounded-full shadow-[0_0_8px_#ffcc00]"></span> На фото: Интерактивный слайдер "До/После"</li>
