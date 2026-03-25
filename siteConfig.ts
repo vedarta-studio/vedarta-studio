@@ -592,7 +592,7 @@ vedAna: {
       {
         title: 'Презентация проекта для инвесторов',
         image: 'https://drive.google.com/thumbnail?id=1MCWRRwE1TE5ooc-1YUkmIYMe0m7GAs8d&sz=w1600',
-        video: 'https://drive.google.com/file/d/1YNx80gzDMEG_IcqWKWX9zzp1k-lf2M-O/preview',
+        video:  'https://drive.google.com/file/d/1pYuSMnGL4fSeSrcrUqgz626UYEMhrR5s/preview',
       },
     ],
 
