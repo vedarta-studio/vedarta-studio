@@ -150,7 +150,7 @@ export const About: React.FC = () => {
                       <h4 className="text-[#d4af37] text-[10px] font-black uppercase tracking-[0.5em] mb-4 md:mb-6 border-b border-[#d4af37]/20 pb-2 inline-block">
                         {fullManifesto.experience.title}
                       </h4>
-                      <p className="text-lg md:text-xl font-light leading-relaxed text-white/70 mb-4">{fullManifesto.experience.text}</p>
+                      <p className="text-lg md:text-xl font-light leading-relaxed text-white mb-4">{fullManifesto.experience.text}</p>
                     </div>
                     <div className="space-y-4">
                       <p className="text-[10px] font-black uppercase tracking-widest text-white/40">В моем портфолио есть и крупные объекты:</p>
@@ -194,13 +194,13 @@ export const About: React.FC = () => {
                   <h4 className="text-3xl md:text-6xl font-logo italic text-[#d4af37] leading-tight">
                     {fullManifesto.philosophy.title}
                   </h4>
-                  <p className="text-lg md:text-2xl italic text-white/70 max-w-3xl mx-auto leading-relaxed">{fullManifesto.philosophy.lead}</p>
+                  <p className="text-lg md:text-2xl italic text-white max-w-3xl mx-auto leading-relaxed">{fullManifesto.philosophy.lead}</p>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 md:gap-x-12 gap-y-4 md:gap-y-6 text-left max-w-2xl mx-auto">
                     {fullManifesto.philosophy.bullets.slice(0, 6).map((b, i) => (
                       <div key={i} className="flex items-center gap-4">
                         <span className="w-1.5 h-1.5 bg-[#d4af37] rounded-full shadow-[0_0_8px_#d4af37] shrink-0"></span>
-                        <span className="text-lg md:text-xl italic text-white/70">{b}</span>
+                        <span className="text-lg md:text-xl italic text-white">{b}</span>
                       </div>
                     ))}
                   </div>
@@ -243,7 +243,7 @@ export const About: React.FC = () => {
                       {fullManifesto.howWeWork.points.map((p, i) => (
                         <div key={i} className="text-lg md:text-xl">
                           <span className="text-[#d4af37] font-black uppercase tracking-widest mr-3 block md:inline mb-1 md:mb-0">{p.label}</span>
-                          <span className="italic text-white/70">{p.text}</span>
+                          <span className="italic text-white">{p.text}</span>
                         </div>
                       ))}
                     </div>
@@ -259,7 +259,7 @@ export const About: React.FC = () => {
                       <h5 className="text-[#d4af37] text-[10px] font-black uppercase tracking-[0.5em] border-b border-[#d4af37]/20 pb-2 inline-block mb-4 md:mb-6">
                         {fullManifesto.howWeWork.romance.title}
                       </h5>
-                      <div className="space-y-3 md:space-y-4 text-xl md:text-2xl font-logo italic text-white/70 border-l-2 border-[#d4af37]/10 pl-6 md:pl-8">
+                      <div className="space-y-3 md:space-y-4 text-xl md:text-2xl font-logo italic text-white border-l-2 border-[#d4af37]/10 pl-6 md:pl-8">
                         {fullManifesto.howWeWork.romance.texts.map((t, i) => <p key={i}>{t}</p>)}
                       </div>
                     </div>
@@ -274,7 +274,7 @@ export const About: React.FC = () => {
 
               <section className="animate-reveal text-center py-8 md:py-12 bg-black/20 border-t border-[#d4af37]/10 rounded-sm">
                 <h4 className="text-2xl md:text-5xl font-logo italic text-[#d4af37] mb-6 md:mb-10 leading-tight">{fullManifesto.whyCalm.title}</h4>
-                <div className="space-y-3 md:space-y-4 mb-8 md:mb-14 text-lg md:text-xl italic text-white/70 px-4">
+                <div className="space-y-3 md:space-y-4 mb-8 md:mb-14 text-lg md:text-xl italic text-white px-4">
                   {fullManifesto.whyCalm.reasons.map((r, i) => <p key={i}>{r}</p>)}
                 </div>
                 

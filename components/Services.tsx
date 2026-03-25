@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const services = [
@@ -61,13 +60,17 @@ export const Services: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
           <div className="max-w-2xl">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 italic font-serif text-[#f5f5dc]">Наши Услуги</h2>
-            <p className="text-[#f5f5dc]/70 text-lg leading-relaxed">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 italic font-serif text-[#f5f5dc]">
+              Наши Услуги
+            </h2>
+
+            <p className="text-[#f5f5dc]/85 text-[17px] md:text-[18px] leading-relaxed font-light">
               Мы предлагаем полный цикл работ: от первой линии на бумаге до финальной презентации объекта. Каждый проект для нас — это уникальная история.
             </p>
           </div>
-          <a 
-            href="#pricing" 
+
+          <a
+            href="#pricing"
             onClick={scrollToPricing}
             className="text-[#d4af37] font-bold tracking-widest border-b border-[#d4af37]/50 pb-2 hover:border-[#d4af37] transition-all"
           >
@@ -81,10 +84,15 @@ export const Services: React.FC = () => {
               <div className="mb-8 transform group-hover:scale-110 transition-transform duration-500 origin-left">
                 {s.icon}
               </div>
-              <h3 className="text-xl font-bold mb-4 text-[#f5f5dc]">{s.title}</h3>
-              <p className="text-[#f5f5dc]/50 text-sm leading-relaxed mb-6">
+
+              <h3 className="text-[20px] md:text-[22px] font-semibold mb-4 text-[#f5f5dc]">
+                {s.title}
+              </h3>
+
+              <p className="text-[#f5f5dc]/80 text-[16.5px] md:text-[17.5px] leading-relaxed mb-6 font-light">
                 {s.description}
               </p>
+
               <div className="w-12 h-px bg-[#d4af37]/30 group-hover:w-full transition-all duration-500"></div>
             </div>
           ))}

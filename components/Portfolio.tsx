@@ -483,7 +483,7 @@ export const Portfolio: React.FC = () => {
           <h3 className="text-2xl md:text-3xl font-logo italic text-[#f5f5dc] leading-snug mb-6">
             Эволюция <span className="text-[#ffcc00]">sAnyaAD → VedArta</span>
           </h3>
-          <p className="text-sm md:text-base text-[#f5f5dc]/70 leading-relaxed mb-8">
+          <p className="text-sm md:text-base text-[#f5f5dc] leading-relaxed mb-8">
             Я уже упоминала в истории студии, что раньше моя авторская мастерская называлась sAnyaAD.
             Если вам интересно посмотреть живой путь и сравнить ранние интерьеры с сегодняшней VedArta,
             загляните в архивное портфолио — там видно, как время и новые технологии двигают вперёд
@@ -540,11 +540,11 @@ export const Portfolio: React.FC = () => {
                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                       <div>
                         <h4 className="text-[#ffcc00] text-[9px] font-black tracking-[0.4em] uppercase mb-4 opacity-60">Задача</h4>
-                        <p className="text-sm md:text-base text-[#f5f5dc]/70 font-light leading-relaxed">{selectedProject.details.task}</p>
+                        <p className="text-[18px] md:text-[19px] text-[#f5f5dc]/85 font-light leading-relaxed">{selectedProject.details.task}</p>
                       </div>
                       <div>
                         <h4 className="text-[#ffcc00] text-[9px] font-black tracking-[0.4em] uppercase mb-4 opacity-60">Решение</h4>
-                        <p className="text-sm md:text-base text-[#f5f5dc]/70 font-light leading-relaxed">{selectedProject.details.solution}</p>
+                        <p className="text-[18px] md:text-[19px] text-[#f5f5dc]/85 font-light leading-relaxed">{selectedProject.details.solution}</p>
                       </div>
                    </div>
                    <div>

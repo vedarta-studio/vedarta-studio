@@ -7,6 +7,12 @@ type ConceptBlock =
   | { type: 'paragraph'; text: string }
   | { type: 'list'; items: string[] };
 
+type VideoItem = {
+  title: string;
+  image: string;
+  video: string;
+};
+
 const renderInlineMarkdown = (text: string) => {
   const parts = text.split(/(\*\*.*?\*\*)/g);
 
@@ -40,14 +46,27 @@ const getDriveViewLink = (url: string) => {
   return url;
 };
 
+const getDriveFileId = (url: string) => {
+  const match = url.match(/\/file\/d\/([^/]+)/);
+  return match ? match[1] : null;
+};
+
+const getDrivePreviewLink = (url: string) => {
+  const fileId = getDriveFileId(url);
+  return fileId ? `https://drive.google.com/file/d/${fileId}/preview` : url;
+};
+
 export const DomZhizni: React.FC = () => {
   const houseOfLife = siteConfig.houseOfLife;
   const [isConceptOpen, setIsConceptOpen] = useState(false);
+  const [activeVideo, setActiveVideo] = useState<VideoItem | null>(null);
 
   const conceptBlocks = useMemo(
     () => houseOfLife.conceptContent as ConceptBlock[],
     [houseOfLife.conceptContent]
   );
+
+  const closeVideoModal = () => setActiveVideo(null);
 
   return (
     <section className="bg-[#0e2a1f] -mt-24 pt-8 pb-16 border-t border-[#fff7a0]/10">
@@ -62,7 +81,7 @@ export const DomZhizni: React.FC = () => {
               <div className="space-y-3">
                 {renderCompactParagraphs(
                   houseOfLife.intro,
-                  'text-[24px] md:text-[30px] leading-[1.28]'
+                  'text-[18px] md:text-[22px] leading-[1.4]'
                 )}
               </div>
 
@@ -75,14 +94,13 @@ export const DomZhizni: React.FC = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-            {houseOfLife.videos.map((item: { title: string; image: string; video: string }) => (
-              <a
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8 items-start">
+            {houseOfLife.videos.map((item: VideoItem) => (
+              <button
                 key={item.title}
-                href={getDriveViewLink(item.video)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group block text-left"
+                type="button"
+                onClick={() => setActiveVideo(item)}
+                className="group block text-left w-full"
               >
                 <div className="relative overflow-hidden border border-[#fff7a0]/20 bg-[#0e2a1f] transition-all duration-300 hover:border-[#ffcc00]/60">
                   <img
@@ -91,8 +109,10 @@ export const DomZhizni: React.FC = () => {
                     className="w-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-[1.01]"
                   />
 
+                  <div className="absolute inset-0 bg-black/20 transition-opacity duration-300 group-hover:bg-black/10" />
+
                   <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div className="w-16 h-16 border border-[#ffcc00]/80 bg-[#0e2a1f]/80 flex items-center justify-center">
+                    <div className="w-16 h-16 border border-[#ffcc00]/80 bg-[#0e2a1f]/80 flex items-center justify-center shadow-[0_0_20px_rgba(255,204,0,0.18)]">
                       <div className="ml-1 w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-l-[16px] border-l-[#ffcc00]" />
                     </div>
                   </div>
@@ -101,7 +121,7 @@ export const DomZhizni: React.FC = () => {
                 <div className="mt-4 text-center text-[#f5f5dc] text-[18px] md:text-[22px] tracking-[0.06em] uppercase leading-[1.2]">
                   {item.title}
                 </div>
-              </a>
+              </button>
             ))}
           </div>
 
@@ -190,12 +210,8 @@ export const DomZhizni: React.FC = () => {
                 </div>
 
                 <div className="mt-10">
-                  <div className="text-[#f5f5dc] text-[18px] md:text-[20px] leading-[1.35] mb-2">
+                  <div className="text-[#f5f5dc]/90 italic text-[22px] md:text-[24px] leading-[1.4] tracking-[0.04em]">
                     {houseOfLife.signature.name}
-                  </div>
-
-                  <div className="text-[#f5f5dc]/90 text-[34px] md:text-[42px] leading-none font-[cursive] italic">
-                    {houseOfLife.signature.brand}
                   </div>
                 </div>
               </div>
@@ -210,7 +226,7 @@ export const DomZhizni: React.FC = () => {
               )}
             </div>
 
-            <div className="mt-6 text-[#f5f5dc]/85 text-[18px] md:text-[22px] leading-[1.35] mb-2">
+            <div className="mt-6 text-[#f5f5dc] text-[18px] md:text-[22px] leading-[1.35] mb-2">
               {houseOfLife.telegramText}
             </div>
 
@@ -229,6 +245,44 @@ export const DomZhizni: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {activeVideo && (
+        <div className="fixed inset-0 z-[9999] bg-black/88 px-3 py-3 md:px-6 md:py-6 flex items-center justify-center">
+          <div className="relative w-full max-w-4xl">
+            <button
+              type="button"
+              onClick={closeVideoModal}
+              aria-label="Закрыть"
+              className="absolute top-2 right-2 z-20 w-11 h-11 border border-[#ffcc00] bg-[#0e2a1f]/95 text-[#ffcc00] text-2xl leading-none flex items-center justify-center hover:bg-[#ffcc00] hover:text-[#0e2a1f] transition-all duration-300 shadow-[0_0_20px_rgba(255,204,0,0.18)]"
+            >
+              ×
+            </button>
+
+            <div className="border border-[#fff7a0]/20 bg-[#0b1f18] overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.35)]">
+              <div className="relative w-full bg-black aspect-[4/3] max-h-[80vh]">
+                <iframe
+                  src={getDrivePreviewLink(activeVideo.video)}
+                  title={activeVideo.title}
+                  className="absolute inset-0 w-full h-full border-0"
+                  allow="autoplay; fullscreen"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+
+            <div className="mt-3 flex justify-center">
+              <a
+                href={getDriveViewLink(activeVideo.video)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-gold px-5 py-3 text-[12px] md:text-[14px] font-black tracking-[0.14em] uppercase"
+              >
+                Открыть видео отдельно
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
