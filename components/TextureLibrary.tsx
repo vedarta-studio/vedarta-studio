@@ -6,7 +6,6 @@ export const TextureLibrary: React.FC = () => {
     <section className="py-24 bg-[#091f18] overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-          
           <div className="max-w-xl">
             <span className="text-[#ffcc00] text-[10px] font-black tracking-[0.6em] uppercase mb-4 block">
               Тактильный код
@@ -17,20 +16,16 @@ export const TextureLibrary: React.FC = () => {
             </h2>
           </div>
 
-          <p className="text-[#f5f5dc]/40 text-sm font-light italic max-w-sm text-right">
+          <p className="text-[#f5f5dc]/70 text-[18px] md:text-[19px] font-light italic leading-relaxed max-w-sm text-right">
             Мы проектируем не только глазами, но и кончиками пальцев. Каждая фактура — это эмоциональный якорь вашего дома.
           </p>
-
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {siteConfig.materials.map((m, idx) => (
             <div key={idx} className="relative group cursor-crosshair">
-
               <div className="relative p-3 md:p-4 border border-[#ffcc00]/20 transition-all duration-700 group-hover:border-[#ffcc00] group-hover:shadow-[0_0_40px_rgba(255,204,0,0.15)] bg-black/40">
-                
                 <div className="aspect-[3/4] overflow-hidden relative">
-
                   <img
                     src={m.image}
                     alt={m.name}
@@ -40,7 +35,6 @@ export const TextureLibrary: React.FC = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#091f18] via-[#091f18]/40 to-transparent opacity-20 group-hover:opacity-70 transition-opacity duration-700 z-10"></div>
 
                   <div className="absolute inset-0 p-8 flex flex-col justify-end z-30 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
-
                     <span className="text-[#ffcc00] text-[10px] font-black uppercase tracking-[0.3em] mb-1">
                       {m.emotion}
                     </span>
@@ -52,13 +46,9 @@ export const TextureLibrary: React.FC = () => {
                     <p className="text-white opacity-0 group-hover:opacity-100 text-xs transition-all duration-700 italic">
                       {m.desc}
                     </p>
-
                   </div>
-
                 </div>
-
               </div>
-
             </div>
           ))}
         </div>
