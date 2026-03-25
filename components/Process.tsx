@@ -34,11 +34,11 @@ export const Process: React.FC = () => {
                 {s.num}
               </span>
 
-              <h3 className="text-xl font-bold mt-4 mb-3 uppercase tracking-wider text-[#f5f5dc]">
+              <h3 className="text-[24px] font-bold mt-4 mb-3 uppercase tracking-wider text-[#f5f5dc]">
                 {s.title}
               </h3>
 
-              <p className="text-[#f5f5dc]/70 text-[17px] md:text-[18px] leading-relaxed">
+              <p className="text-[#f5f5dc]/70 text-[19px] md:text-[20px] leading-relaxed">
                 {s.desc}
               </p>
             </div>
@@ -48,3 +48,5 @@ export const Process: React.FC = () => {
     </section>
   );
 };
+
+
