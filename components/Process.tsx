@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const steps = [
@@ -31,9 +30,17 @@ export const Process: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {steps.map((s, idx) => (
             <div key={idx} className="group">
-              <span className="text-5xl font-serif italic text-[#d4af37]/10 group-hover:text-[#d4af37]/40 transition-colors duration-500">{s.num}</span>
-              <h3 className="text-xl font-bold mt-4 mb-3 uppercase tracking-wider text-[#f5f5dc]">{s.title}</h3>
-              <p className="text-[#f5f5dc]/40 text-sm leading-relaxed">{s.desc}</p>
+              <span className="text-5xl font-serif italic text-[#d4af37]/10 group-hover:text-[#d4af37]/40 transition-colors duration-500">
+                {s.num}
+              </span>
+
+              <h3 className="text-xl font-bold mt-4 mb-3 uppercase tracking-wider text-[#f5f5dc]">
+                {s.title}
+              </h3>
+
+              <p className="text-[#f5f5dc]/70 text-[17px] md:text-[18px] leading-relaxed">
+                {s.desc}
+              </p>
             </div>
           ))}
         </div>
